@@ -74,14 +74,14 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jComboBox4" min="-2" pref="93" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="textField3" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Component id="your_money" min="-2" pref="224" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jComboBox5" min="-2" pref="93" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jButton5" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
-                                      <Component id="textField6" alignment="0" min="-2" pref="224" max="-2" attributes="0"/>
+                                      <Component id="to_exchange" alignment="0" min="-2" pref="224" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -127,16 +127,16 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jComboBox4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="textField3" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="your_money" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="textField6" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to_exchange" alignment="0" max="32767" attributes="0"/>
                           <Component id="jComboBox5" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="jButton5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" pref="40" max="-2" attributes="0"/>
@@ -157,7 +157,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="java.awt.TextField" name="textField3">
+            <Component class="java.awt.TextField" name="your_money">
               <Properties>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Text Cursor"/>
@@ -165,15 +165,17 @@
                 <Property name="text" type="java.lang.String" value="field your money"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField3ActionPerformed"/>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="your_moneyFocusGained"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="your_moneyFocusLost"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="your_moneyActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.TextField" name="textField6">
+            <Component class="java.awt.TextField" name="to_exchange">
               <Properties>
                 <Property name="text" type="java.lang.String" value="money you can exchange"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textField6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="to_exchangeActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="jComboBox4">

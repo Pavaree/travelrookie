@@ -32,8 +32,8 @@ public class FristPage extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        textField3 = new java.awt.TextField();
-        textField6 = new java.awt.TextField();
+        your_money = new java.awt.TextField();
+        to_exchange = new java.awt.TextField();
         jComboBox4 = new javax.swing.JComboBox<>();
         jComboBox5 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
@@ -63,18 +63,26 @@ public class FristPage extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(60, 174, 163));
 
-        textField3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        textField3.setText("field your money");
-        textField3.addActionListener(new java.awt.event.ActionListener() {
+        your_money.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        your_money.setText("field your money");
+        your_money.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                your_moneyFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                your_moneyFocusLost(evt);
+            }
+        });
+        your_money.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField3ActionPerformed(evt);
+                your_moneyActionPerformed(evt);
             }
         });
 
-        textField6.setText("money you can exchange");
-        textField6.addActionListener(new java.awt.event.ActionListener() {
+        to_exchange.setText("money you can exchange");
+        to_exchange.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField6ActionPerformed(evt);
+                to_exchangeActionPerformed(evt);
             }
         });
 
@@ -140,13 +148,13 @@ public class FristPage extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                             .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(30, 30, 30)
-                            .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(your_money, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                             .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField6, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(to_exchange, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(110, 110, 110))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(37, Short.MAX_VALUE)
@@ -178,14 +186,14 @@ public class FristPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jComboBox4)
-                    .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(your_money, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textField6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(to_exchange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -354,13 +362,13 @@ public class FristPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
-    private void textField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField6ActionPerformed
+    private void to_exchangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to_exchangeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textField6ActionPerformed
+    }//GEN-LAST:event_to_exchangeActionPerformed
 
-    private void textField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField3ActionPerformed
+    private void your_moneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_your_moneyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textField3ActionPerformed
+    }//GEN-LAST:event_your_moneyActionPerformed
 
     private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
         // TODO add your handling code here:  
@@ -385,6 +393,21 @@ public class FristPage extends javax.swing.JFrame {
         Place obj = new Place();
         obj.setVisible(true);
     }//GEN-LAST:event_btn_PlaceMouseClicked
+
+    private void your_moneyFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_your_moneyFocusGained
+        if(your_money.getText().trim().equals("field your money")){
+            your_money.setText("");
+            your_money.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_your_moneyFocusGained
+
+    private void your_moneyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_your_moneyFocusLost
+        // TODO add your handling code here:
+        if(your_money.getText().trim().equals("")){
+            your_money.setText("field your money");
+            your_money.setForeground(new Color(236, 240, 241));
+        }
+    }//GEN-LAST:event_your_moneyFocusLost
 
     /**
      * @param args the command line arguments
@@ -451,9 +474,9 @@ public class FristPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator2;
-    private java.awt.TextField textField3;
-    private java.awt.TextField textField6;
     private java.awt.TextField textField7;
     private java.awt.TextField textField8;
+    private java.awt.TextField to_exchange;
+    private java.awt.TextField your_money;
     // End of variables declaration//GEN-END:variables
 }
