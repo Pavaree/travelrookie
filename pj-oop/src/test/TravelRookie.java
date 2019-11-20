@@ -19,6 +19,8 @@ public class TravelRookie extends javax.swing.JFrame {
      */
     public TravelRookie() {
         initComponents();
+        Home h = new Home();
+        jDesktopPane1.add(h).setVisible(true);
     }
     void setColor(JPanel panel){
         panel.setBackground(new Color(0,102,255));
