@@ -5,6 +5,9 @@
  */
 package test;
 
+import java.util.Calendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -19,8 +22,9 @@ public class time extends javax.swing.JInternalFrame {
     public time() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
+        BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null);
+        clock();
     }
 
     /**
@@ -47,6 +51,11 @@ public class time extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("11:45:01");
+        jLabel2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jLabel2PropertyChange(evt);
+            }
+        });
 
         jLabel1.setText("jLabel1");
 
@@ -111,11 +120,15 @@ public class time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel2PropertyChange
+
+    }//GEN-LAST:event_jLabel2PropertyChange
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -126,4 +139,26 @@ public class time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
+    public void clock() {
+        Thread clock = new Thread() {
+            public void run() {
+                try {
+                    while(true){
+                    Calendar d = Calendar.getInstance();
+                    int sec = d.get(Calendar.SECOND);
+                    int min = d.get(Calendar.MINUTE);
+                    int hour = d.get(Calendar.HOUR_OF_DAY);
+                    jLabel2.setText(String.format("%02d:%02d:%02d", hour, min, sec));
+                    jLabel7.setText(String.format("%02d:%02d:%02d", hour, min, sec));
+                    sleep(1000);
+                    }
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(time.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        };
+        clock.start();
+
+    }
 }
