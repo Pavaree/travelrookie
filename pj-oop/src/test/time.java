@@ -54,7 +54,10 @@ public class time extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        temp = new javax.swing.JLabel();
+        city = new javax.swing.JLabel();
+        d_or_n_us = new javax.swing.JLabel();
+        d_or_n_them = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(640, 640));
 
@@ -77,7 +80,7 @@ public class time extends javax.swing.JInternalFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Temparature");
 
-        jLabel6.setFont(new java.awt.Font("Yu Gothic UI", 0, 48)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Time");
 
@@ -85,55 +88,82 @@ public class time extends javax.swing.JInternalFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("--:--:--");
 
-        jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Temp");
+        temp.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        temp.setForeground(new java.awt.Color(255, 255, 255));
+        temp.setText("Temp");
+
+        city.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        city.setForeground(new java.awt.Color(255, 255, 255));
+        city.setText("City");
+
+        d_or_n_us.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        d_or_n_us.setForeground(new java.awt.Color(255, 255, 255));
+        d_or_n_us.setText("dorn");
+
+        d_or_n_them.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        d_or_n_them.setForeground(new java.awt.Color(255, 255, 255));
+        d_or_n_them.setText("dorn");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(430, 430, 430))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(159, 159, 159)
+                .addGap(172, 172, 172)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 345, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addGap(182, 182, 182))
+                .addGap(214, 214, 214))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGap(326, 326, 326)
+                            .addComponent(jLabel5))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(39, 39, 39)
+                            .addComponent(temp)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(326, 326, 326)
-                        .addComponent(jLabel5))
+                        .addGap(425, 425, 425)
+                        .addComponent(city))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(411, 411, 411)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel3))))
+                        .addGap(410, 410, 410)
+                        .addComponent(jLabel6)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(198, 198, 198)
+                .addComponent(d_or_n_us)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(d_or_n_them)
+                .addGap(243, 243, 243))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(city)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel1))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(jLabel6)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                        .addGap(102, 102, 102)
+                        .addComponent(temp)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d_or_n_us)
+                    .addComponent(d_or_n_them))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -144,7 +174,7 @@ public class time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
         );
 
         pack();
@@ -156,13 +186,16 @@ public class time extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel city;
+    private javax.swing.JLabel d_or_n_them;
+    private javax.swing.JLabel d_or_n_us;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel temp;
     // End of variables declaration//GEN-END:variables
 
     public void clock() {
@@ -215,7 +248,9 @@ public class time extends javax.swing.JInternalFrame {
         JSONArray array_data = new JSONArray(myResponse.getJSONArray("data").toString());
         JSONObject object_data = new JSONObject(array_data.getJSONObject(0).toString());
         System.out.println(object_data.getInt("temp"));
-        jLabel3.setText(object_data.getInt("temp")+" C");
+        temp.setText(object_data.getInt("temp")+" °C");
+        System.out.println(object_data.getString("city_name"));
+        city.setText(object_data.getString("city_name"));
         //System.out.println(object_data.getString("app_temp"));
         
     }
