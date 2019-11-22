@@ -38,7 +38,7 @@ public class Home extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jComboBox4 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        Lets_go = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(930, 630));
 
@@ -63,10 +63,16 @@ public class Home extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setText("Let's Go");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Lets_go.setBackground(new java.awt.Color(255, 255, 255));
+        Lets_go.setText("Let's Go");
+        Lets_go.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lets_goMouseClicked(evt);
+            }
+        });
+        Lets_go.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Lets_goActionPerformed(evt);
             }
         });
 
@@ -89,7 +95,7 @@ public class Home extends javax.swing.JInternalFrame {
                         .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Lets_go, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -105,7 +111,7 @@ public class Home extends javax.swing.JInternalFrame {
                         .addGap(35, 35, 35)
                         .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jButton1))
+                        .addComponent(Lets_go))
                     .addComponent(jLabel5))
                 .addGap(51, 51, 51))
         );
@@ -118,7 +124,7 @@ public class Home extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
         );
 
         pack();
@@ -128,13 +134,19 @@ public class Home extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Lets_goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lets_goActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Lets_goActionPerformed
+
+    private void Lets_goMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lets_goMouseClicked
+       jPanel1.removeAll();
+       time t = new time();
+       jPanel1.add(t).setVisible(true);
+    }//GEN-LAST:event_Lets_goMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Lets_go;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
