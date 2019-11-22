@@ -260,6 +260,30 @@ public class TravelRookie extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     int x,y;
+
+    public JPanel getBtn_home() {
+        return btn_home;
+    }
+
+    public void setBtn_home(JPanel btn_home) {
+        this.btn_home = btn_home;
+    }
+
+    public JPanel getBtn_place() {
+        return btn_place;
+    }
+
+    public void setBtn_place(JPanel btn_place) {
+        this.btn_place = btn_place;
+    }
+
+    public JPanel getBtn_time_emp() {
+        return btn_time_emp;
+    }
+
+    public void setBtn_time_emp(JPanel btn_time_emp) {
+        this.btn_time_emp = btn_time_emp;
+    }
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
         // TODO add your handling code here:
         x = evt.getX();
