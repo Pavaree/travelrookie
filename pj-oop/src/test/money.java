@@ -33,98 +33,98 @@ public class money extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        money_get = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        your_money = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        page_money = new javax.swing.JPanel();
+        Exchang_txt = new javax.swing.JLabel();
+        money_got = new javax.swing.JTextField();
+        contry_need = new javax.swing.JComboBox<>();
+        money_us = new javax.swing.JTextField();
+        btn_exc = new javax.swing.JButton();
+        contry_us = new javax.swing.JComboBox<>();
 
-        jPanel3.setBackground(new java.awt.Color(0, 156, 134));
-        jPanel3.setPreferredSize(new java.awt.Dimension(930, 630));
+        page_money.setBackground(new java.awt.Color(0, 156, 134));
+        page_money.setPreferredSize(new java.awt.Dimension(930, 630));
 
-        jLabel2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Exchange money");
+        Exchang_txt.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        Exchang_txt.setForeground(new java.awt.Color(255, 255, 255));
+        Exchang_txt.setText("Exchange money");
 
-        money_get.setText("Money");
-        money_get.addFocusListener(new java.awt.event.FocusAdapter() {
+        money_got.setText("Money");
+        money_got.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                money_getFocusGained(evt);
+                money_gotFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                money_getFocusLost(evt);
+                money_gotFocusLost(evt);
             }
         });
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        contry_need.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
+        contry_need.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                contry_needActionPerformed(evt);
             }
         });
 
-        your_money.setText("field your money");
-        your_money.addFocusListener(new java.awt.event.FocusAdapter() {
+        money_us.setText("field your money");
+        money_us.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                your_moneyFocusGained(evt);
+                money_usFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                your_moneyFocusLost(evt);
+                money_usFocusLost(evt);
             }
         });
 
-        jButton1.setText("EXCHANGE");
+        btn_exc.setText("EXCHANGE");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
+        contry_us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                contry_usActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout page_moneyLayout = new javax.swing.GroupLayout(page_money);
+        page_money.setLayout(page_moneyLayout);
+        page_moneyLayout.setHorizontalGroup(
+            page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(page_moneyLayout.createSequentialGroup()
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(page_moneyLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(page_moneyLayout.createSequentialGroup()
                                 .addGap(71, 71, 71)
-                                .addComponent(jLabel2))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(Exchang_txt))))
+                    .addGroup(page_moneyLayout.createSequentialGroup()
                         .addGap(242, 242, 242)
-                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(money_get, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(your_money, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(181, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(227, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_moneyLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_exc, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(210, 210, 210))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        page_moneyLayout.setVerticalGroup(
+            page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(page_moneyLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(your_money, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(84, 84, 84)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(money_get, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72)
-                .addComponent(jButton1)
+                .addComponent(btn_exc)
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
@@ -132,64 +132,64 @@ public class money extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(page_money, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+    private void contry_needActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contry_needActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_contry_needActionPerformed
 
-    private void your_moneyFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_your_moneyFocusGained
+    private void money_usFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_usFocusGained
         // TODO add your handling code here:
-        if(your_money.getText().trim().equals("field your money")){
-            your_money.setText("");
-            your_money.setForeground(Color.BLACK);
+        if(money_us.getText().trim().equals("field your money")){
+            money_us.setText("");
+            money_us.setForeground(Color.BLACK);
         }
-    }//GEN-LAST:event_your_moneyFocusGained
+    }//GEN-LAST:event_money_usFocusGained
 
-    private void your_moneyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_your_moneyFocusLost
+    private void money_usFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_usFocusLost
         // TODO add your handling code here:
-        if(your_money.getText().trim().equals("")){
-            your_money.setText("field your money");
-            your_money.setForeground(new Color(51,51,51));
+        if(money_us.getText().trim().equals("")){
+            money_us.setText("field your money");
+            money_us.setForeground(new Color(51,51,51));
         }
-    }//GEN-LAST:event_your_moneyFocusLost
+    }//GEN-LAST:event_money_usFocusLost
 
-    private void money_getFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_getFocusGained
+    private void money_gotFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_gotFocusGained
         // TODO add your handling code here:
-        if(money_get.getText().trim().equals("Money")){
-            money_get.setText("");
-            money_get.setForeground(Color.BLACK);
+        if(money_got.getText().trim().equals("Money")){
+            money_got.setText("");
+            money_got.setForeground(Color.BLACK);
         }
-    }//GEN-LAST:event_money_getFocusGained
+    }//GEN-LAST:event_money_gotFocusGained
 
-    private void money_getFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_getFocusLost
+    private void money_gotFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_gotFocusLost
         // TODO add your handling code here:
-        if(money_get.getText().trim().equals("")){
-            money_get.setText("Money");
-            money_get.setForeground(new Color(51,51,51));
+        if(money_got.getText().trim().equals("")){
+            money_got.setText("Money");
+            money_got.setForeground(new Color(51,51,51));
         }
-    }//GEN-LAST:event_money_getFocusLost
+    }//GEN-LAST:event_money_gotFocusLost
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void contry_usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contry_usActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_contry_usActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField money_get;
-    private javax.swing.JTextField your_money;
+    private javax.swing.JLabel Exchang_txt;
+    private javax.swing.JButton btn_exc;
+    private javax.swing.JComboBox<String> contry_need;
+    private javax.swing.JComboBox<String> contry_us;
+    private javax.swing.JTextField money_got;
+    private javax.swing.JTextField money_us;
+    private javax.swing.JPanel page_money;
     // End of variables declaration//GEN-END:variables
 }

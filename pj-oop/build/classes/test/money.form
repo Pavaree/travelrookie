@@ -19,17 +19,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel3" alignment="1" min="-2" max="-2" attributes="0"/>
+          <Component id="page_money" alignment="1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel3" alignment="0" pref="642" max="32767" attributes="0"/>
+          <Component id="page_money" alignment="0" pref="646" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel3">
+    <Container class="javax.swing.JPanel" name="page_money">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="86" green="9c" red="0" type="rgb"/>
@@ -47,28 +47,28 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                              <Component id="contry_need" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Exchang_txt" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="242" max="-2" attributes="0"/>
-                          <Component id="jComboBox5" min="-2" max="-2" attributes="0"/>
+                          <Component id="contry_us" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="money_get" min="-2" pref="272" max="-2" attributes="0"/>
-                              <Component id="your_money" min="-2" pref="272" max="-2" attributes="0"/>
+                              <Component id="money_got" min="-2" pref="272" max="-2" attributes="0"/>
+                              <Component id="money_us" min="-2" pref="272" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="181" max="32767" attributes="0"/>
+                  <EmptySpace pref="227" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="438" max="-2" attributes="0"/>
+                  <Component id="btn_exc" min="-2" pref="438" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -77,26 +77,26 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="87" max="-2" attributes="0"/>
+                  <Component id="Exchang_txt" min="-2" pref="87" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="your_money" min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="jComboBox5" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="money_us" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="contry_us" min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="money_get" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="jComboBox4" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="money_got" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="contry_need" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_exc" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="118" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="Exchang_txt">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Harlow Solid Italic" size="48" style="0"/>
@@ -107,16 +107,16 @@
             <Property name="text" type="java.lang.String" value="Exchange money"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="money_get">
+        <Component class="javax.swing.JTextField" name="money_got">
           <Properties>
             <Property name="text" type="java.lang.String" value="Money"/>
           </Properties>
           <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="money_getFocusGained"/>
-            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="money_getFocusLost"/>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="money_gotFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="money_gotFocusLost"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox4">
+        <Component class="javax.swing.JComboBox" name="contry_need">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="20">
@@ -144,27 +144,27 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="contry_needActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="your_money">
+        <Component class="javax.swing.JTextField" name="money_us">
           <Properties>
             <Property name="text" type="java.lang.String" value="field your money"/>
           </Properties>
           <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="your_moneyFocusGained"/>
-            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="your_moneyFocusLost"/>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="money_usFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="money_usFocusLost"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btn_exc">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXCHANGE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox5">
+        <Component class="javax.swing.JComboBox" name="contry_us">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="20">
@@ -192,7 +192,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="contry_usActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
