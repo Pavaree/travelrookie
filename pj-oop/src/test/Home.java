@@ -40,33 +40,33 @@ public class Home extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        page_home = new javax.swing.JPanel();
+        img_travelrookie = new javax.swing.JLabel();
+        TravelRookie = new javax.swing.JLabel();
+        choose_txt = new javax.swing.JLabel();
+        choose_country = new javax.swing.JComboBox<>();
         Lets_go = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(930, 630));
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel1.setPreferredSize(new java.awt.Dimension(930, 630));
+        page_home.setBackground(new java.awt.Color(0, 153, 153));
+        page_home.setPreferredSize(new java.awt.Dimension(930, 630));
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/410QlxiASbL.png"))); // NOI18N
+        img_travelrookie.setForeground(new java.awt.Color(255, 255, 255));
+        img_travelrookie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/410QlxiASbL.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("TravelRookie");
+        TravelRookie.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        TravelRookie.setForeground(new java.awt.Color(255, 255, 255));
+        TravelRookie.setText("TravelRookie");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Choose your place to travel");
+        choose_txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        choose_txt.setForeground(new java.awt.Color(255, 255, 255));
+        choose_txt.setText("Choose your place to travel");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        choose_country.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
+        choose_country.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                choose_countryActionPerformed(evt);
             }
         });
 
@@ -83,43 +83,43 @@ public class Home extends javax.swing.JInternalFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout page_homeLayout = new javax.swing.GroupLayout(page_home);
+        page_home.setLayout(page_homeLayout);
+        page_homeLayout.setHorizontalGroup(
+            page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(page_homeLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
-                .addComponent(jLabel5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(img_travelrookie)
+                .addGroup(page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(page_homeLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(TravelRookie))
+                    .addGroup(page_homeLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(choose_txt))
+                    .addGroup(page_homeLayout.createSequentialGroup()
                         .addGap(84, 84, 84)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(choose_country, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(page_homeLayout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addComponent(Lets_go, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        page_homeLayout.setVerticalGroup(
+            page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_homeLayout.createSequentialGroup()
                 .addContainerGap(71, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(page_homeLayout.createSequentialGroup()
                         .addGap(79, 79, 79)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TravelRookie, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(54, 54, 54)
-                        .addComponent(jLabel3)
+                        .addComponent(choose_txt)
                         .addGap(35, 35, 35)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(choose_country, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(Lets_go))
-                    .addComponent(jLabel5))
+                    .addComponent(img_travelrookie))
                 .addGap(51, 51, 51))
         );
 
@@ -127,19 +127,19 @@ public class Home extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(page_home, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
+            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+    private void choose_countryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choose_countryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_choose_countryActionPerformed
 
     private void Lets_goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lets_goActionPerformed
         // TODO add your handling code here:
@@ -148,19 +148,19 @@ public class Home extends javax.swing.JInternalFrame {
     private void Lets_goMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lets_goMouseClicked
         u.setColor(u.getBtn_time_emp());
         u.resetColor(u.getBtn_home());
-        jPanel1.removeAll();
+        page_home.removeAll();
         Time t = new Time(this);
-        jPanel1.add(t).setVisible(true);
+        page_home.add(t).setVisible(true);
 
     }//GEN-LAST:event_Lets_goMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Lets_go;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel TravelRookie;
+    private javax.swing.JComboBox<String> choose_country;
+    private javax.swing.JLabel choose_txt;
+    private javax.swing.JLabel img_travelrookie;
+    private javax.swing.JPanel page_home;
     // End of variables declaration//GEN-END:variables
 }
