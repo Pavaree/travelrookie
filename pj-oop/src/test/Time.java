@@ -257,7 +257,7 @@ public class Time extends javax.swing.JInternalFrame {
         //Read JSON response and print
         JSONObject myResponse = new JSONObject(response.toString());
         //System.out.println("result after Reading JSON Response");
-        System.out.println(myResponse);
+        //System.out.println(myResponse);
         JSONArray array_data = new JSONArray(myResponse.getJSONArray("data").toString());
         JSONObject object_data = new JSONObject(array_data.getJSONObject(0).toString());
         //System.out.println(object_data.getInt("temp"));

@@ -6,21 +6,37 @@
 package test;
 
 import java.awt.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+import org.json.JSONObject;
 
 /**
  *
  * @author Pavaree
  */
-public class money extends javax.swing.JInternalFrame {
+public class Money extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form money
      */
-    public money() {
+    public Money() {
         initComponents();
+        exchange();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
+        BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null);
     }
 
@@ -72,6 +88,13 @@ public class money extends javax.swing.JInternalFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 money_usFocusLost(evt);
+            }
+        });
+        money_us.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                money_usInputMethodTextChanged(evt);
             }
         });
 
@@ -136,45 +159,86 @@ public class money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void exchange() {
+        money_us.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent de) {
+                changeRealTime();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent de) {
+                changeRealTime();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent de) {
+                changeRealTime();
+            }
+
+        });
+        
+        money_got.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent de) {
+                changeRealTimeBack();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent de) {
+                changeRealTimeBack();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent de) {
+                changeRealTimeBack();
+            }
+
+        });
+    }
     private void contry_needActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contry_needActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_contry_needActionPerformed
 
     private void money_usFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_usFocusGained
         // TODO add your handling code here:
-        if(money_us.getText().trim().equals("field your money")){
+        if (money_us.getText().trim().equals("field your money")) {
             money_us.setText("");
             money_us.setForeground(Color.BLACK);
+
         }
+
     }//GEN-LAST:event_money_usFocusGained
 
     private void money_usFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_usFocusLost
         // TODO add your handling code here:
-        if(money_us.getText().trim().equals("")){
+        if (money_us.getText().trim().equals("")) {
             money_us.setText("field your money");
-            money_us.setForeground(new Color(51,51,51));
+            money_us.setForeground(new Color(51, 51, 51));
         }
+
     }//GEN-LAST:event_money_usFocusLost
 
     private void money_gotFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_gotFocusGained
         // TODO add your handling code here:
-        if(money_got.getText().trim().equals("Money")){
+        if (money_got.getText().trim().equals("Money")) {
             money_got.setText("");
             money_got.setForeground(Color.BLACK);
+
         }
     }//GEN-LAST:event_money_gotFocusGained
 
     private void money_gotFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_gotFocusLost
         // TODO add your handling code here:
-        if(money_got.getText().trim().equals("")){
+        if (money_got.getText().trim().equals("")) {
             money_got.setText("Money");
-            money_got.setForeground(new Color(51,51,51));
+            money_got.setForeground(new Color(51, 51, 51));
         }
     }//GEN-LAST:event_money_gotFocusLost
 
@@ -182,7 +246,130 @@ public class money extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contry_usActionPerformed
 
+    private void money_usInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_money_usInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_money_usInputMethodTextChanged
 
+    public Money(JLabel Exchang_txt, JButton btn_exc, JComboBox<String> contry_need, JComboBox<String> contry_us, JTextField money_got, JTextField money_us, JPanel page_money) {
+        this.Exchang_txt = Exchang_txt;
+        this.btn_exc = btn_exc;
+        this.contry_need = contry_need;
+        this.contry_us = contry_us;
+        this.money_got = money_got;
+        this.money_us = money_us;
+        this.page_money = page_money;
+    }
+
+    public void changeRealTime() {
+        try {
+            String first = contry_us.getSelectedItem().toString();
+            String second = contry_need.getSelectedItem().toString();
+            String url = "";
+            if (first.equals("Australia")) {
+                url = "https://api.exchangeratesapi.io/latest?base=AUD";
+            } else if (first.equals("Canada")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CAD";
+            } else if (first.equals("China")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CNY";
+            } else if (first.equals("Craotia")) {
+                url = "https://api.exchangeratesapi.io/latest?base=";
+            } else if (first.equals("Denmark")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CAD";
+            }
+            URL obj = new URL(url);
+            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+            // optional default is GET
+            con.setRequestMethod("GET");
+            //add request header
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
+            int responseCode = con.getResponseCode();
+            //System.out.println("\nSending 'GET' request to URL : " + url);
+            //System.out.println("Response Code : " + responseCode);
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+            //print in String
+            //System.out.println(response);
+            //Read JSON response and print
+            JSONObject myResponse = new JSONObject(response.toString());
+            //System.out.println("result after Reading JSON Response");
+            System.out.println(myResponse);
+            JSONObject rates = new JSONObject(myResponse.getJSONObject("rates").toString());
+            System.out.println(rates);
+            if (second.equals("Australia")) {
+                money_got.setText(money_us.getText());
+            } else if (second.equals("Canada")) {
+                if (money_us.getText().equals("")) {
+                    money_got.setText("0");
+                } else {
+                    money_got.setText(Integer.parseInt(money_us.getText()) * rates.getDouble("CAD") + "");
+                }
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(Money.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public void changeRealTimeBack() {
+        try {
+            String first = contry_us.getSelectedItem().toString();
+            String second = contry_need.getSelectedItem().toString();
+            String url = "";
+            if (first.equals("Australia")) {
+                url = "https://api.exchangeratesapi.io/latest?base=AUD";
+            } else if (first.equals("Canada")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CAD";
+            } else if (first.equals("China")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CNY";
+            } else if (first.equals("Craotia")) {
+                url = "https://api.exchangeratesapi.io/latest?base=";
+            } else if (first.equals("Denmark")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CAD";
+            }
+            URL obj = new URL(url);
+            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+            // optional default is GET
+            con.setRequestMethod("GET");
+            //add request header
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
+            int responseCode = con.getResponseCode();
+            //System.out.println("\nSending 'GET' request to URL : " + url);
+            //System.out.println("Response Code : " + responseCode);
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+            //print in String
+            //System.out.println(response);
+            //Read JSON response and print
+            JSONObject myResponse = new JSONObject(response.toString());
+            //System.out.println("result after Reading JSON Response");
+            System.out.println(myResponse);
+            JSONObject rates = new JSONObject(myResponse.getJSONObject("rates").toString());
+            System.out.println(rates);
+            if (second.equals("Australia")) {
+                money_got.setText(money_us.getText());
+            } else if (second.equals("Canada")) {
+                if (money_got.getText().equals("")) {
+                    money_us.setText("0");
+                } else {
+                    money_got.setText(Integer.parseInt(money_us.getText()) * rates.getDouble("CAD") + "");
+                }
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(Money.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Exchang_txt;
     private javax.swing.JButton btn_exc;

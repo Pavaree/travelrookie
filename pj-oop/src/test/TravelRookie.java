@@ -285,7 +285,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_time_emp);
         resetColor(btn_home);
         resetColor(btn_place);
-        money m = new money();
+        Money m = new Money();
         jDesktopPane1.add(m).setVisible(true);
     }//GEN-LAST:event_btn_moneyMouseClicked
 
