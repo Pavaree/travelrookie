@@ -314,10 +314,10 @@ public class TravelRookie extends javax.swing.JFrame {
 
     private void btn_moneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_moneyMouseClicked
         // TODO add your handling code here:
-        setColor(btn_money);
-        resetColor(btn_time_emp);
-        resetColor(btn_home);
-        resetColor(btn_place);
+        this.setColor(btn_money);
+        this.resetColor(btn_time_emp);
+        this.resetColor(btn_home);
+        this.resetColor(btn_place);
         money m = new money();
         jDesktopPane1.add(m).setVisible(true);
     }//GEN-LAST:event_btn_moneyMouseClicked
@@ -341,7 +341,14 @@ public class TravelRookie extends javax.swing.JFrame {
         time tt = new time();
         jDesktopPane1.add(tt).setVisible(true);
     }//GEN-LAST:event_btn_time_empMouseClicked
-
+    
+    public void click(){
+        setColor(btn_time_emp);
+        resetColor(btn_home);
+        resetColor(btn_money);
+        resetColor(btn_place);
+        System.out.println("Hello");
+    }
     /**
      * @param args the command line arguments
      */
@@ -381,7 +388,7 @@ public class TravelRookie extends javax.swing.JFrame {
     private javax.swing.JPanel btn_home;
     private javax.swing.JPanel btn_money;
     private javax.swing.JPanel btn_place;
-    private javax.swing.JPanel btn_time_emp;
+    public javax.swing.JPanel btn_time_emp;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

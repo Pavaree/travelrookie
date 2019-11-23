@@ -140,8 +140,8 @@ public class Home extends javax.swing.JInternalFrame {
 
     private void Lets_goMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lets_goMouseClicked
        TravelRookie tr = new TravelRookie();
-       tr.setColor(getBtn_home());
-       
+       tr.resetColor(tr.getBtn_home());
+       tr.setColor(tr.getBtn_time_emp());
        jPanel1.removeAll();
        time t = new time();
        jPanel1.add(t).setVisible(true);

@@ -229,8 +229,8 @@ public class time extends javax.swing.JInternalFrame {
         //add request header
         con.setRequestProperty("User-Agent", "Mozilla/5.0");
         int responseCode = con.getResponseCode();
-        System.out.println("\nSending 'GET' request to URL : " + url);
-        System.out.println("Response Code : " + responseCode);
+        //System.out.println("\nSending 'GET' request to URL : " + url);
+        //System.out.println("Response Code : " + responseCode);
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()));
         String inputLine;
@@ -240,16 +240,16 @@ public class time extends javax.swing.JInternalFrame {
         }
         in.close();
         //print in String
-        System.out.println(response);
+        //System.out.println(response);
         //Read JSON response and print
         JSONObject myResponse = new JSONObject(response.toString());
-        System.out.println("result after Reading JSON Response");
+        //System.out.println("result after Reading JSON Response");
         System.out.println(myResponse);
         JSONArray array_data = new JSONArray(myResponse.getJSONArray("data").toString());
         JSONObject object_data = new JSONObject(array_data.getJSONObject(0).toString());
-        System.out.println(object_data.getInt("temp"));
+        //System.out.println(object_data.getInt("temp"));
         temp.setText(object_data.getInt("temp")+" °C");
-        System.out.println(object_data.getString("city_name"));
+        //System.out.println(object_data.getString("city_name"));
         city.setText(object_data.getString("city_name"));
         //System.out.println(object_data.getString("app_temp"));
         
