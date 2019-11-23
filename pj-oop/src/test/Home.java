@@ -55,11 +55,11 @@ public class Home extends javax.swing.JInternalFrame {
         img_travelrookie.setForeground(new java.awt.Color(255, 255, 255));
         img_travelrookie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/410QlxiASbL.png"))); // NOI18N
 
-        TravelRookie.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        TravelRookie.setFont(new java.awt.Font("Harlow Solid Italic", 0, 55)); // NOI18N
         TravelRookie.setForeground(new java.awt.Color(255, 255, 255));
         TravelRookie.setText("TravelRookie");
 
-        choose_txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        choose_txt.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         choose_txt.setForeground(new java.awt.Color(255, 255, 255));
         choose_txt.setText("Choose your place to travel");
 
@@ -88,39 +88,43 @@ public class Home extends javax.swing.JInternalFrame {
         page_homeLayout.setHorizontalGroup(
             page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(page_homeLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addGap(24, 24, 24)
                 .addComponent(img_travelrookie)
                 .addGroup(page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page_homeLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(TravelRookie))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(choose_txt)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(page_homeLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(choose_txt))
+                        .addComponent(TravelRookie)
+                        .addContainerGap(46, Short.MAX_VALUE))
                     .addGroup(page_homeLayout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(choose_country, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(97, 97, 97)
+                        .addComponent(Lets_go, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(page_homeLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(Lets_go, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                        .addGap(119, 119, 119)
+                        .addComponent(choose_country, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         page_homeLayout.setVerticalGroup(
             page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_homeLayout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
+            .addGroup(page_homeLayout.createSequentialGroup()
                 .addGroup(page_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page_homeLayout.createSequentialGroup()
-                        .addGap(79, 79, 79)
+                        .addGap(112, 112, 112)
                         .addComponent(TravelRookie, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
+                        .addGap(49, 49, 49)
                         .addComponent(choose_txt)
-                        .addGap(35, 35, 35)
+                        .addGap(58, 58, 58)
                         .addComponent(choose_country, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addGap(52, 52, 52)
                         .addComponent(Lets_go))
-                    .addComponent(img_travelrookie))
-                .addGap(51, 51, 51))
+                    .addGroup(page_homeLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(img_travelrookie)))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -131,7 +135,7 @@ public class Home extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
+            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
         );
 
         pack();

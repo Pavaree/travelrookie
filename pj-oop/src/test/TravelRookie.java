@@ -103,34 +103,17 @@ public class TravelRookie extends javax.swing.JFrame {
                 btn_homeMouseClicked(evt);
             }
         });
+        btn_home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Home");
+        btn_home.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 85, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_home_20px_1.png"))); // NOI18N
+        btn_home.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
-        javax.swing.GroupLayout btn_homeLayout = new javax.swing.GroupLayout(btn_home);
-        btn_home.setLayout(btn_homeLayout);
-        btn_homeLayout.setHorizontalGroup(
-            btn_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_homeLayout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
-        );
-        btn_homeLayout.setVerticalGroup(
-            btn_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btn_homeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btn_homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 34, 230, -1));
+        jPanel2.add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 40));
 
         btn_time_emp.setBackground(new java.awt.Color(0, 51, 153));
         btn_time_emp.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,36 +121,18 @@ public class TravelRookie extends javax.swing.JFrame {
                 btn_time_empMouseClicked(evt);
             }
         });
+        btn_time_emp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_schedule_20px.png"))); // NOI18N
+        btn_time_emp.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Time & Temperature");
-
-        javax.swing.GroupLayout btn_time_empLayout = new javax.swing.GroupLayout(btn_time_emp);
-        btn_time_emp.setLayout(btn_time_empLayout);
-        btn_time_empLayout.setHorizontalGroup(
-            btn_time_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_time_empLayout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        btn_time_empLayout.setVerticalGroup(
-            btn_time_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_time_empLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(btn_time_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel5))
-                .addContainerGap())
-        );
-
+        btn_time_emp.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 14, -1, -1));
         jLabel5.getAccessibleContext().setAccessibleName("time&temp");
 
-        jPanel2.add(btn_time_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 230, 50));
+        jPanel2.add(btn_time_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 230, 50));
 
         btn_money.setBackground(new java.awt.Color(0, 51, 153));
         btn_money.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,6 +143,7 @@ public class TravelRookie extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_exchange_20px_1.png"))); // NOI18N
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Money");
 
@@ -186,23 +152,23 @@ public class TravelRookie extends javax.swing.JFrame {
         btn_moneyLayout.setHorizontalGroup(
             btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_moneyLayout.createSequentialGroup()
-                .addContainerGap(66, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGap(56, 56, 56))
         );
         btn_moneyLayout.setVerticalGroup(
             btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_moneyLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel8))
-                .addContainerGap())
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(14, 14, 14))
         );
 
-        jPanel2.add(btn_money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 230, -1));
+        jPanel2.add(btn_money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 230, 50));
 
         btn_place.setBackground(new java.awt.Color(0, 51, 153));
         btn_place.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,6 +179,7 @@ public class TravelRookie extends javax.swing.JFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_point_of_interest_20px_1.png"))); // NOI18N
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Place");
 
@@ -221,23 +188,23 @@ public class TravelRookie extends javax.swing.JFrame {
         btn_placeLayout.setHorizontalGroup(
             btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_placeLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         btn_placeLayout.setVerticalGroup(
             btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_placeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel10))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addGroup(btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel2.add(btn_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 230, -1));
+        jPanel2.add(btn_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 230, 50));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 230, 630));
 
