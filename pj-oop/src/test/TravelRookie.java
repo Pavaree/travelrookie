@@ -19,7 +19,7 @@ public class TravelRookie extends javax.swing.JFrame {
      */
     public TravelRookie() {
         initComponents();
-        Home h = new Home();
+        Home h = new Home(this);
         jDesktopPane1.add(h).setVisible(true);
     }
     void setColor(JPanel panel){
@@ -308,16 +308,16 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_time_emp);
         resetColor(btn_money);
         resetColor(btn_place);
-        Home h = new Home();
+        Home h = new Home(this);
         jDesktopPane1.add(h).setVisible(true);
     }//GEN-LAST:event_btn_homeMouseClicked
 
     private void btn_moneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_moneyMouseClicked
         // TODO add your handling code here:
-        this.setColor(btn_money);
-        this.resetColor(btn_time_emp);
-        this.resetColor(btn_home);
-        this.resetColor(btn_place);
+        setColor(btn_money);
+        resetColor(btn_time_emp);
+        resetColor(btn_home);
+        resetColor(btn_place);
         money m = new money();
         jDesktopPane1.add(m).setVisible(true);
     }//GEN-LAST:event_btn_moneyMouseClicked

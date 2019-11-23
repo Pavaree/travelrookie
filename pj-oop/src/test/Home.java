@@ -13,14 +13,15 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author Pavaree
  */
 public class Home extends javax.swing.JInternalFrame {
-
+    private TravelRookie u;
     /**
      * Creates new form Home
      */
-    public Home() {
+    public Home(TravelRookie got) {
+        this.u = got;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
+        BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null);
     }
 
@@ -139,13 +140,12 @@ public class Home extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_Lets_goActionPerformed
 
     private void Lets_goMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lets_goMouseClicked
-       TravelRookie tr = new TravelRookie();
-       tr.resetColor(tr.getBtn_home());
-       tr.setColor(tr.getBtn_time_emp());
-       jPanel1.removeAll();
-       time t = new time();
-       jPanel1.add(t).setVisible(true);
-       
+        u.setColor(u.getBtn_time_emp());
+        u.resetColor(u.getBtn_home());
+        jPanel1.removeAll();
+        time t = new time();
+        jPanel1.add(t).setVisible(true);
+
     }//GEN-LAST:event_Lets_goMouseClicked
 
 
