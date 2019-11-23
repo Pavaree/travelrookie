@@ -13,7 +13,7 @@ import javax.swing.*;
  * @author Pavaree
  */
 public class TravelRookie extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form TravelRookie
      */
@@ -338,7 +338,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_home);
         resetColor(btn_money);
         resetColor(btn_place);
-        time tt = new time();
+        Time tt = new Time();
         jDesktopPane1.add(tt).setVisible(true);
     }//GEN-LAST:event_btn_time_empMouseClicked
     

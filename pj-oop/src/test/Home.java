@@ -17,6 +17,12 @@ public class Home extends javax.swing.JInternalFrame {
     /**
      * Creates new form Home
      */
+    public Home(){
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
+        bi.setNorthPane(null);
+    }
     public Home(TravelRookie got) {
         this.u = got;
         initComponents();
@@ -143,7 +149,7 @@ public class Home extends javax.swing.JInternalFrame {
         u.setColor(u.getBtn_time_emp());
         u.resetColor(u.getBtn_home());
         jPanel1.removeAll();
-        time t = new time();
+        Time t = new Time(this);
         jPanel1.add(t).setVisible(true);
 
     }//GEN-LAST:event_Lets_goMouseClicked

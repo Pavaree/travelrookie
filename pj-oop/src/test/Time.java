@@ -21,12 +21,25 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author Pavaree
  */
-public class time extends javax.swing.JInternalFrame {
-
+public class Time extends javax.swing.JInternalFrame {
+    private Home main;
     /**
      * Creates new form time
      */
-    public time() {
+    public Time(){
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
+        bi.setNorthPane(null);
+        clock();
+        try{
+            temp();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public Time(Home h) {
+        this.main = h;
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
@@ -174,7 +187,7 @@ public class time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
+            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
         );
 
         pack();
@@ -213,7 +226,7 @@ public class time extends javax.swing.JInternalFrame {
                     sleep(1000);
                     }
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(time.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Time.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         };
