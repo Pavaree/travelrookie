@@ -20,7 +20,7 @@ public class TravelRookie extends javax.swing.JFrame {
     public TravelRookie() {
         initComponents();
         Home h = new Home(this);
-        jDesktopPane1.add(h).setVisible(true);
+        main_page.add(h).setVisible(true);
     }
     void setColor(JPanel panel){
         panel.setBackground(new Color(0,102,255));
@@ -38,64 +38,64 @@ public class TravelRookie extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        tab_up = new javax.swing.JPanel();
+        img_exit = new javax.swing.JLabel();
+        tab_beside = new javax.swing.JPanel();
         btn_home = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        txt_home = new javax.swing.JLabel();
+        img_home = new javax.swing.JLabel();
         btn_time_emp = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        img_time = new javax.swing.JLabel();
+        txt_time = new javax.swing.JLabel();
         btn_money = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        img_money = new javax.swing.JLabel();
+        txt_money = new javax.swing.JLabel();
         btn_place = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        img_place = new javax.swing.JLabel();
+        txt_place = new javax.swing.JLabel();
+        main_page = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        tab_up.setBackground(new java.awt.Color(0, 0, 0));
+        tab_up.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel1MouseDragged(evt);
+                tab_upMouseDragged(evt);
             }
         });
-        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        tab_up.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel1MousePressed(evt);
+                tab_upMousePressed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_close_window_30px.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        img_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_close_window_30px.png"))); // NOI18N
+        img_exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                img_exitMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout tab_upLayout = new javax.swing.GroupLayout(tab_up);
+        tab_up.setLayout(tab_upLayout);
+        tab_upLayout.setHorizontalGroup(
+            tab_upLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab_upLayout.createSequentialGroup()
                 .addContainerGap(1115, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(img_exit)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        tab_upLayout.setVerticalGroup(
+            tab_upLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(img_exit, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 60));
+        getContentPane().add(tab_up, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 60));
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 102));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tab_beside.setBackground(new java.awt.Color(0, 51, 102));
+        tab_beside.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_home.setBackground(new java.awt.Color(0, 102, 255));
         btn_home.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -105,15 +105,15 @@ public class TravelRookie extends javax.swing.JFrame {
         });
         btn_home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Home");
-        btn_home.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 85, 20));
+        txt_home.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txt_home.setForeground(new java.awt.Color(255, 255, 255));
+        txt_home.setText("Home");
+        btn_home.add(txt_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 85, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_home_20px_1.png"))); // NOI18N
-        btn_home.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+        img_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_home_20px_1.png"))); // NOI18N
+        btn_home.add(img_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
-        jPanel2.add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 40));
+        tab_beside.add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 40));
 
         btn_time_emp.setBackground(new java.awt.Color(0, 51, 153));
         btn_time_emp.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,16 +123,16 @@ public class TravelRookie extends javax.swing.JFrame {
         });
         btn_time_emp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_schedule_20px.png"))); // NOI18N
-        btn_time_emp.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+        img_time.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_schedule_20px.png"))); // NOI18N
+        btn_time_emp.add(img_time, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Time & Temperature");
-        btn_time_emp.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 14, -1, -1));
-        jLabel5.getAccessibleContext().setAccessibleName("time&temp");
+        txt_time.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txt_time.setForeground(new java.awt.Color(255, 255, 255));
+        txt_time.setText("Time & Temperature");
+        btn_time_emp.add(txt_time, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 14, -1, -1));
+        txt_time.getAccessibleContext().setAccessibleName("time&temp");
 
-        jPanel2.add(btn_time_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 230, 50));
+        tab_beside.add(btn_time_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 230, 50));
 
         btn_money.setBackground(new java.awt.Color(0, 51, 153));
         btn_money.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -141,11 +141,11 @@ public class TravelRookie extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_exchange_20px_1.png"))); // NOI18N
+        img_money.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_exchange_20px_1.png"))); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Money");
+        txt_money.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txt_money.setForeground(new java.awt.Color(255, 255, 255));
+        txt_money.setText("Money");
 
         javax.swing.GroupLayout btn_moneyLayout = new javax.swing.GroupLayout(btn_money);
         btn_money.setLayout(btn_moneyLayout);
@@ -153,9 +153,9 @@ public class TravelRookie extends javax.swing.JFrame {
             btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_moneyLayout.createSequentialGroup()
                 .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(jLabel8)
+                .addComponent(img_money)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_money, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56))
         );
         btn_moneyLayout.setVerticalGroup(
@@ -163,12 +163,12 @@ public class TravelRookie extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_moneyLayout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
+                    .addComponent(img_money)
+                    .addComponent(txt_money))
                 .addGap(14, 14, 14))
         );
 
-        jPanel2.add(btn_money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 230, 50));
+        tab_beside.add(btn_money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 230, 50));
 
         btn_place.setBackground(new java.awt.Color(0, 51, 153));
         btn_place.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -177,11 +177,11 @@ public class TravelRookie extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_point_of_interest_20px_1.png"))); // NOI18N
+        img_place.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_point_of_interest_20px_1.png"))); // NOI18N
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Place");
+        txt_place.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txt_place.setForeground(new java.awt.Color(255, 255, 255));
+        txt_place.setText("Place");
 
         javax.swing.GroupLayout btn_placeLayout = new javax.swing.GroupLayout(btn_place);
         btn_place.setLayout(btn_placeLayout);
@@ -189,9 +189,9 @@ public class TravelRookie extends javax.swing.JFrame {
             btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_placeLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel10)
+                .addComponent(img_place)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_place, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(71, Short.MAX_VALUE))
         );
         btn_placeLayout.setVerticalGroup(
@@ -199,29 +199,29 @@ public class TravelRookie extends javax.swing.JFrame {
             .addGroup(btn_placeLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
+                    .addComponent(img_place)
+                    .addComponent(txt_place))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel2.add(btn_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 230, 50));
+        tab_beside.add(btn_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 230, 50));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 230, 630));
+        getContentPane().add(tab_beside, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 230, 630));
 
-        jDesktopPane1.setBackground(new java.awt.Color(0, 153, 153));
+        main_page.setBackground(new java.awt.Color(0, 153, 153));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout main_pageLayout = new javax.swing.GroupLayout(main_page);
+        main_page.setLayout(main_pageLayout);
+        main_pageLayout.setHorizontalGroup(
+            main_pageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 930, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        main_pageLayout.setVerticalGroup(
+            main_pageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 630, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 930, 630));
+        getContentPane().add(main_page, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 930, 630));
 
         pack();
         setLocationRelativeTo(null);
@@ -251,23 +251,23 @@ public class TravelRookie extends javax.swing.JFrame {
     public void setBtn_time_emp(JPanel btn_time_emp) {
         this.btn_time_emp = btn_time_emp;
     }
-    private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
+    private void tab_upMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_upMousePressed
         // TODO add your handling code here:
         x = evt.getX();
         y = evt.getY();
-    }//GEN-LAST:event_jPanel1MousePressed
+    }//GEN-LAST:event_tab_upMousePressed
 
-    private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
+    private void tab_upMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_upMouseDragged
         // TODO add your handling code here:
         int xx = evt.getXOnScreen();
         int yy = evt.getYOnScreen();
         this.setLocation(xx-x,yy-y);
-    }//GEN-LAST:event_jPanel1MouseDragged
+    }//GEN-LAST:event_tab_upMouseDragged
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void img_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_img_exitMouseClicked
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_img_exitMouseClicked
 
     private void btn_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_homeMouseClicked
         // TODO add your handling code here:
@@ -276,7 +276,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_money);
         resetColor(btn_place);
         Home h = new Home(this);
-        jDesktopPane1.add(h).setVisible(true);
+        main_page.add(h).setVisible(true);
     }//GEN-LAST:event_btn_homeMouseClicked
 
     private void btn_moneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_moneyMouseClicked
@@ -286,7 +286,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_home);
         resetColor(btn_place);
         Money m = new Money();
-        jDesktopPane1.add(m).setVisible(true);
+        main_page.add(m).setVisible(true);
     }//GEN-LAST:event_btn_moneyMouseClicked
 
     private void btn_placeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_placeMouseClicked
@@ -296,7 +296,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_money);
         resetColor(btn_home);
         Place p = new Place();
-        jDesktopPane1.add(p).setVisible(true);
+        main_page.add(p).setVisible(true);
     }//GEN-LAST:event_btn_placeMouseClicked
 
     private void btn_time_empMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_time_empMouseClicked
@@ -306,7 +306,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_money);
         resetColor(btn_place);
         Time tt = new Time();
-        jDesktopPane1.add(tt).setVisible(true);
+        main_page.add(tt).setVisible(true);
     }//GEN-LAST:event_btn_time_empMouseClicked
     
     public void click(){
@@ -356,17 +356,17 @@ public class TravelRookie extends javax.swing.JFrame {
     private javax.swing.JPanel btn_money;
     private javax.swing.JPanel btn_place;
     public javax.swing.JPanel btn_time_emp;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel img_exit;
+    private javax.swing.JLabel img_home;
+    private javax.swing.JLabel img_money;
+    private javax.swing.JLabel img_place;
+    private javax.swing.JLabel img_time;
+    private javax.swing.JDesktopPane main_page;
+    private javax.swing.JPanel tab_beside;
+    private javax.swing.JPanel tab_up;
+    private javax.swing.JLabel txt_home;
+    private javax.swing.JLabel txt_money;
+    private javax.swing.JLabel txt_place;
+    private javax.swing.JLabel txt_time;
     // End of variables declaration//GEN-END:variables
 }
