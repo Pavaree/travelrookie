@@ -5,6 +5,7 @@
  */
 package test;
 
+import javax.swing.ImageIcon;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -12,7 +13,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author Pavaree
  */
 public class Place extends javax.swing.JInternalFrame {
-
+    TravelRookie page;
     /**
      * Creates new form Place
      */
@@ -21,7 +22,23 @@ public class Place extends javax.swing.JInternalFrame {
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
+        
+        
     }
+    public Place(TravelRookie in){
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
+        bi.setNorthPane(null);
+        this.page = in;
+        System.out.println(page.place);
+        showInfo();
+    }
+    
+    public void showInfo(){
+        img1.setIcon(new ImageIcon("../place_image/australia/bondibeach"));
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -187,7 +187,7 @@ public class Time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
         );
 
         pack();
@@ -234,8 +234,21 @@ public class Time extends javax.swing.JInternalFrame {
 
     }
     public void temp() throws Exception{
-        String url = "https://api.weatherbit.io/v2.0/current?city=Seoul&key=3213a3ed4eab4b798f7bf32372334b75";
-        URL obj = new URL(url);
+        String url = "https://api.weatherbit.io/v2.0/current";
+        String place = "";
+        String key = "&key=3213a3ed4eab4b798f7bf32372334b75";
+        if (main.place.equals("Australia")){
+            place = "?city=Canberra";
+        }else if(main.place.equals("Canada")){
+            place = "?city=Ottawa";
+        }else if(main.place.equals("China")){
+            place = "?city=Beijing";
+        }else if(main.place.equals("Croatia")){
+            place = "?city=Zagreb";
+        }else if(main.place.equals("Denmark")){
+            place = "?city=Copenhagen";
+        }
+        URL obj = new URL(url+place+key);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         // optional default is GET
         con.setRequestMethod("GET");

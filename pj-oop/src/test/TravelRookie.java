@@ -13,10 +13,12 @@ import javax.swing.*;
  * @author Pavaree
  */
 public class TravelRookie extends javax.swing.JFrame {
-    
+    public String place;
     /**
      * Creates new form TravelRookie
      */
+    
+    
     public TravelRookie() {
         initComponents();
         Home h = new Home(this);
@@ -295,7 +297,7 @@ public class TravelRookie extends javax.swing.JFrame {
         resetColor(btn_time_emp);
         resetColor(btn_money);
         resetColor(btn_home);
-        Place p = new Place();
+        Place p = new Place(this);
         main_page.add(p).setVisible(true);
     }//GEN-LAST:event_btn_placeMouseClicked
 
@@ -369,4 +371,14 @@ public class TravelRookie extends javax.swing.JFrame {
     private javax.swing.JLabel txt_place;
     private javax.swing.JLabel txt_time;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @param place the place to set
+     */
+    public void setPlace(String place) {
+        this.place = place;
+    }
+    
+    
+    
 }

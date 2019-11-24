@@ -14,6 +14,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class Home extends javax.swing.JInternalFrame {
     private TravelRookie u;
+    public String place ="";
     /**
      * Creates new form Home
      */
@@ -153,9 +154,10 @@ public class Home extends javax.swing.JInternalFrame {
         u.setColor(u.getBtn_time_emp());
         u.resetColor(u.getBtn_home());
         page_home.removeAll();
+        place = choose_country.getSelectedItem().toString();
         Time t = new Time(this);
+        u.setPlace(place);
         page_home.add(t).setVisible(true);
-
     }//GEN-LAST:event_Lets_goMouseClicked
 
 

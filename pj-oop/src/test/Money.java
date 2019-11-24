@@ -5,6 +5,7 @@
  */
 package test;
 
+import com.sun.java.accessibility.util.SwingEventMonitor;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,12 +30,13 @@ import org.json.JSONObject;
  */
 public class Money extends javax.swing.JInternalFrame {
 
+    public DocumentListener check1, check2;
+
     /**
      * Creates new form money
      */
     public Money() {
         initComponents();
-        exchange();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null);
@@ -54,8 +56,9 @@ public class Money extends javax.swing.JInternalFrame {
         money_got = new javax.swing.JTextField();
         contry_need = new javax.swing.JComboBox<>();
         money_us = new javax.swing.JTextField();
-        btn_exc = new javax.swing.JButton();
         contry_us = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         page_money.setBackground(new java.awt.Color(0, 156, 134));
         page_money.setPreferredSize(new java.awt.Dimension(930, 630));
@@ -98,8 +101,6 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
-        btn_exc.setText("EXCHANGE");
-
         contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
         contry_us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,31 +108,35 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel1.setText("เงินของคุณที่จะเปลี่ยน");
+
+        jLabel2.setText("ค่าสกุลเงินที่เปลี่ยนแล้ว");
+
         javax.swing.GroupLayout page_moneyLayout = new javax.swing.GroupLayout(page_money);
         page_money.setLayout(page_moneyLayout);
         page_moneyLayout.setHorizontalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(page_moneyLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(page_moneyLayout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addComponent(Exchang_txt))))
-                    .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addGap(242, 242, 242)
+                        .addGap(111, 111, 111)
                         .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90)
                         .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(227, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_moneyLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btn_exc, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(210, 210, 210))
+                            .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(page_moneyLayout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(page_moneyLayout.createSequentialGroup()
+                                .addGap(71, 71, 71)
+                                .addComponent(Exchang_txt)))))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         page_moneyLayout.setVerticalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,14 +146,15 @@ public class Money extends javax.swing.JInternalFrame {
                 .addGap(85, 85, 85)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)))
                 .addGap(84, 84, 84)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(72, 72, 72)
-                .addComponent(btn_exc)
-                .addContainerGap(118, Short.MAX_VALUE))
+                    .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,48 +165,63 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     public void exchange() {
-        money_us.getDocument().addDocumentListener(new DocumentListener() {
+        money_us.getDocument().addDocumentListener(check1 = new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent de) {
+                money_got.getDocument().removeDocumentListener(check2);
                 changeRealTime();
+
             }
 
             @Override
             public void removeUpdate(DocumentEvent de) {
+                money_got.getDocument().removeDocumentListener(check2);
                 changeRealTime();
+
             }
 
             @Override
             public void changedUpdate(DocumentEvent de) {
+                money_got.getDocument().removeDocumentListener(check2);
                 changeRealTime();
+
             }
 
         });
-        
-        money_got.getDocument().addDocumentListener(new DocumentListener() {
+
+    }
+
+    public void exchangeBack() {
+        money_got.getDocument().addDocumentListener(check2 = new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent de) {
+                money_us.getDocument().removeDocumentListener(check1);
                 changeRealTimeBack();
             }
 
             @Override
             public void removeUpdate(DocumentEvent de) {
+                money_us.getDocument().removeDocumentListener(check1);
                 changeRealTimeBack();
+
             }
 
             @Override
             public void changedUpdate(DocumentEvent de) {
+                money_us.getDocument().removeDocumentListener(check1);
                 changeRealTimeBack();
+
             }
 
         });
+
     }
     private void contry_needActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contry_needActionPerformed
         // TODO add your handling code here:
@@ -211,8 +232,9 @@ public class Money extends javax.swing.JInternalFrame {
         if (money_us.getText().trim().equals("field your money")) {
             money_us.setText("");
             money_us.setForeground(Color.BLACK);
-
         }
+        money_us.setText("");
+        exchange();
 
     }//GEN-LAST:event_money_usFocusGained
 
@@ -230,8 +252,9 @@ public class Money extends javax.swing.JInternalFrame {
         if (money_got.getText().trim().equals("Money")) {
             money_got.setText("");
             money_got.setForeground(Color.BLACK);
-
         }
+        money_got.setText("");
+        exchangeBack();
     }//GEN-LAST:event_money_gotFocusGained
 
     private void money_gotFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_money_gotFocusLost
@@ -252,7 +275,6 @@ public class Money extends javax.swing.JInternalFrame {
 
     public Money(JLabel Exchang_txt, JButton btn_exc, JComboBox<String> contry_need, JComboBox<String> contry_us, JTextField money_got, JTextField money_us, JPanel page_money) {
         this.Exchang_txt = Exchang_txt;
-        this.btn_exc = btn_exc;
         this.contry_need = contry_need;
         this.contry_us = contry_us;
         this.money_got = money_got;
@@ -271,10 +293,10 @@ public class Money extends javax.swing.JInternalFrame {
                 url = "https://api.exchangeratesapi.io/latest?base=CAD";
             } else if (first.equals("China")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CNY";
-            } else if (first.equals("Craotia")) {
-                url = "https://api.exchangeratesapi.io/latest?base=";
+            } else if (first.equals("Croatia")) {
+                url = "https://api.exchangeratesapi.io/latest?base=HRK";
             } else if (first.equals("Denmark")) {
-                url = "https://api.exchangeratesapi.io/latest?base=CAD";
+                url = "https://api.exchangeratesapi.io/latest?base=DKK";
             }
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -301,35 +323,39 @@ public class Money extends javax.swing.JInternalFrame {
             System.out.println(myResponse);
             JSONObject rates = new JSONObject(myResponse.getJSONObject("rates").toString());
             System.out.println(rates);
+
             if (second.equals("Australia")) {
-                money_got.setText(money_us.getText());
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("AUD") + "");
             } else if (second.equals("Canada")) {
-                if (money_us.getText().equals("")) {
-                    money_got.setText("0");
-                } else {
-                    money_got.setText(Integer.parseInt(money_us.getText()) * rates.getDouble("CAD") + "");
-                }
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CAD") + "");
+            } else if (second.equals("China")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CNY") + "");
+            } else if (second.equals("Croatia")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HRK") + "");
+            } else if (second.equals("Denmark")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("DKK") + "");
             }
 
         } catch (IOException ex) {
             Logger.getLogger(Money.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     public void changeRealTimeBack() {
         try {
             String first = contry_us.getSelectedItem().toString();
             String second = contry_need.getSelectedItem().toString();
             String url = "";
-            if (first.equals("Australia")) {
+            if (second.equals("Australia")) {
                 url = "https://api.exchangeratesapi.io/latest?base=AUD";
-            } else if (first.equals("Canada")) {
+            } else if (second.equals("Canada")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CAD";
-            } else if (first.equals("China")) {
+            } else if (second.equals("China")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CNY";
-            } else if (first.equals("Craotia")) {
-                url = "https://api.exchangeratesapi.io/latest?base=";
-            } else if (first.equals("Denmark")) {
-                url = "https://api.exchangeratesapi.io/latest?base=CAD";
+            } else if (second.equals("Croatia")) {
+                url = "https://api.exchangeratesapi.io/latest?base=HRK";
+            } else if (second.equals("Denmark")) {
+                url = "https://api.exchangeratesapi.io/latest?base=DKK";
             }
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -337,7 +363,6 @@ public class Money extends javax.swing.JInternalFrame {
             con.setRequestMethod("GET");
             //add request header
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
-            int responseCode = con.getResponseCode();
             //System.out.println("\nSending 'GET' request to URL : " + url);
             //System.out.println("Response Code : " + responseCode);
             BufferedReader in = new BufferedReader(
@@ -356,25 +381,30 @@ public class Money extends javax.swing.JInternalFrame {
             System.out.println(myResponse);
             JSONObject rates = new JSONObject(myResponse.getJSONObject("rates").toString());
             System.out.println(rates);
-            if (second.equals("Australia")) {
-                money_got.setText(money_us.getText());
-            } else if (second.equals("Canada")) {
-                if (money_got.getText().equals("")) {
-                    money_us.setText("0");
-                } else {
-                    money_got.setText(Integer.parseInt(money_us.getText()) * rates.getDouble("CAD") + "");
-                }
+
+            if (first.equals("Australia")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("AUD") + "");
+            } else if (first.equals("Canada")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CAD") + "");
+            } else if (first.equals("China")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CNY") + "");
+            } else if (first.equals("Croatia")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("HRK") + "");
+            } else if (first.equals("Denmark")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("DKK") + "");
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(Money.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Money.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Exchang_txt;
-    private javax.swing.JButton btn_exc;
     private javax.swing.JComboBox<String> contry_need;
     private javax.swing.JComboBox<String> contry_us;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField money_got;
     private javax.swing.JTextField money_us;
     private javax.swing.JPanel page_money;
