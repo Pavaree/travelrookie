@@ -41,12 +41,15 @@ public class Place extends javax.swing.JInternalFrame {
         String path = "../place_image/australia/bondibeach.jpg";
         
         if (page.place.equals("Australia")){
-            img1.setIcon(new ImageIcon("src\\place_image_australia\\bondibeach.jpg"));
-            img1.setText("enter text here");
-            img2.setIcon(new ImageIcon("src\\place_image_australia\\12apostles.jpg"));
-            img2.setText("enter text here");
-            img3.setIcon(new ImageIcon("src\\place_image_australia\\sydneyopera.jpg"));
-            img3.setText("enter text here");
+            img1.setIcon(new ImageIcon("src\\aus\\12apostles.jpg"));
+            name1.setText("Apostles");
+            season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+            img2.setIcon(new ImageIcon("src\\aus\\bondibeach.jpg"));
+            name2.setText("Bondibeach");
+            season2.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+            img3.setIcon(new ImageIcon("src\\aus\\sydneyopera.jpg"));
+            name3.setText("Sydneyopera");
+            season3.setText("ช่วงเวลาที่เหมาะสม ช่วงคริสต์มาสถึงปีใหม่");
         }
     }
 
@@ -81,87 +84,79 @@ public class Place extends javax.swing.JInternalFrame {
         txt_recommended.setForeground(new java.awt.Color(255, 255, 255));
         txt_recommended.setText("Recommended Place");
 
+        name1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
         name1.setText("name1");
 
-        season1.setText("season1");
+        season1.setFont(new java.awt.Font("CordiaUPC", 0, 18)); // NOI18N
+        season1.setText("เหมาะสม");
 
-        img2.setText("img2");
-
+        name2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
         name2.setText("name2");
 
         season2.setText("season2");
 
-        img3.setText("img3");
-
+        name3.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
         name3.setText("name3");
 
         season3.setText("season3");
 
-        img1.setText("img1");
         img1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout Page_placeLayout = new javax.swing.GroupLayout(Page_place);
         Page_place.setLayout(Page_placeLayout);
         Page_placeLayout.setHorizontalGroup(
             Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Page_placeLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Page_placeLayout.createSequentialGroup()
+                        .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(Page_placeLayout.createSequentialGroup()
+                                .addComponent(season1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(96, 96, 96))
+                            .addGroup(Page_placeLayout.createSequentialGroup()
+                                .addComponent(name1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(56, 56, 56)))
+                        .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(name2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(season2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(57, 57, 57)
+                        .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(name3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(season3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(Page_placeLayout.createSequentialGroup()
+                        .addComponent(img1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addComponent(img2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(47, 47, 47))
             .addGroup(Page_placeLayout.createSequentialGroup()
-                .addGap(255, 255, 255)
+                .addGap(261, 261, 261)
                 .addComponent(txt_recommended)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(Page_placeLayout.createSequentialGroup()
-                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(name1)
-                            .addComponent(season1)))
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(img1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(125, 125, 125)
-                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(name2)
-                            .addComponent(season2)))
-                    .addComponent(img2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(season3)
-                            .addComponent(name3)))
-                    .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56))
         );
         Page_placeLayout.setVerticalGroup(
             Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Page_placeLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addGap(39, 39, 39)
                 .addComponent(txt_recommended, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(img2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(img3, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                    .addComponent(img1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(name3))
                 .addGap(18, 18, 18)
-                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addComponent(img1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(name1)
-                        .addGap(50, 50, 50)
-                        .addComponent(season1))
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addComponent(img2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(name2)
-                        .addGap(50, 50, 50)
-                        .addComponent(season2))
-                    .addGroup(Page_placeLayout.createSequentialGroup()
-                        .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(name3)
-                        .addGap(50, 50, 50)
-                        .addComponent(season3)))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(season1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(season2)
+                    .addComponent(season3))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
