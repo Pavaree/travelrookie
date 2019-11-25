@@ -5,14 +5,17 @@
  */
 package test;
 
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -22,22 +25,41 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author Pavaree
  */
 public class Time extends javax.swing.JInternalFrame {
+
+    public String placeSelect = "";
     private Home main;
+    public int hourThem;
+
     /**
      * Creates new form time
      */
-    public Time(){
+    public Time() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null);
         clock();
-        try{
+        try {
             temp();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    public Time(String a) {
+        this.placeSelect = a;
+        initComponents();
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
+        bi.setNorthPane(null);
+        clock();
+        try {
+            temp();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public Time(Home h) {
         this.main = h;
         initComponents();
@@ -45,9 +67,9 @@ public class Time extends javax.swing.JInternalFrame {
         BasicInternalFrameUI bi = (BasicInternalFrameUI) this.getUI();
         bi.setNorthPane(null);
         clock();
-        try{
+        try {
             temp();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -215,15 +237,21 @@ public class Time extends javax.swing.JInternalFrame {
         Thread clock = new Thread() {
             public void run() {
                 try {
-                    while(true){
-                    Calendar d = Calendar.getInstance();
-                    int sec = d.get(Calendar.SECOND);
-                    int min = d.get(Calendar.MINUTE);
-                    int hour = d.get(Calendar.HOUR_OF_DAY);
-                    time_us.setText(String.format("%02d:%02d:%02d", hour, min, sec));
-                    time_them.setText(String.format("%02d:%02d:%02d", hour, min, sec));
-                    
-                    sleep(1000);
+                    while (true) {
+                        Calendar d = Calendar.getInstance();
+                        int sec = d.get(Calendar.SECOND);
+                        int min = d.get(Calendar.MINUTE);
+                        int hour = d.get(Calendar.HOUR_OF_DAY);
+                        time_us.setText(String.format("%02d:%02d:%02d", hour, min, sec));
+                        int hourThemFormat = hour - 7 + hourThem;
+                        if (hourThemFormat >= 24) {
+                            hourThemFormat -= 24;
+                        }else if(hourThemFormat < 0){
+                            hourThemFormat += 24;
+                        }
+                        time_them.setText(String.format("%02d:%02d:%02d", hourThemFormat, min, sec));
+
+                        sleep(1000);
                     }
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Time.class.getName()).log(Level.SEVERE, null, ex);
@@ -233,28 +261,46 @@ public class Time extends javax.swing.JInternalFrame {
         clock.start();
 
     }
-    public void temp() throws Exception{
+
+    public void temp() throws Exception {
         String url = "https://api.weatherbit.io/v2.0/current";
         String place = "";
         String key = "&key=3213a3ed4eab4b798f7bf32372334b75";
-        if (main.place.equals("Australia")){
-            place = "?city=Canberra";
-        }else if(main.place.equals("Canada")){
-            place = "?city=Ottawa";
-        }else if(main.place.equals("China")){
-            place = "?city=Beijing";
-        }else if(main.place.equals("Croatia")){
-            place = "?city=Zagreb";
-        }else if(main.place.equals("Denmark")){
-            place = "?city=Copenhagen";
+        if (main != null) {
+            //from HOME class
+            if (main.place.equals("Australia")) {
+                place = "?city=Canberra";
+            } else if (main.place.equals("Canada")) {
+                place = "?city=Ottawa";
+            } else if (main.place.equals("China")) {
+                place = "?city=Beijing";
+            } else if (main.place.equals("Croatia")) {
+                place = "?city=Zagreb";
+            } else if (main.place.equals("Denmark")) {
+                place = "?city=Copenhagen";
+            }
+
+        } else {
+
+            //not from Home class
+            if (placeSelect.equals("Australia")) {
+                place = "?city=Canberra";
+            } else if (placeSelect.equals("Canada")) {
+                place = "?city=Ottawa";
+            } else if (placeSelect.equals("China")) {
+                place = "?city=Beijing";
+            } else if (placeSelect.equals("Croatia")) {
+                place = "?city=Zagreb";
+            } else if (placeSelect.equals("Denmark")) {
+                place = "?city=Copenhagen";
+            }
         }
-        URL obj = new URL(url+place+key);
+        URL obj = new URL(url + place + key);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         // optional default is GET
         con.setRequestMethod("GET");
         //add request header
         con.setRequestProperty("User-Agent", "Mozilla/5.0");
-        int responseCode = con.getResponseCode();
         //System.out.println("\nSending 'GET' request to URL : " + url);
         //System.out.println("Response Code : " + responseCode);
         BufferedReader in = new BufferedReader(
@@ -264,6 +310,7 @@ public class Time extends javax.swing.JInternalFrame {
         while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);
         }
+
         in.close();
         //print in String
         //System.out.println(response);
@@ -274,10 +321,57 @@ public class Time extends javax.swing.JInternalFrame {
         JSONArray array_data = new JSONArray(myResponse.getJSONArray("data").toString());
         JSONObject object_data = new JSONObject(array_data.getJSONObject(0).toString());
         //System.out.println(object_data.getInt("temp"));
-        temp.setText(object_data.getInt("temp")+" °C");
+        temp.setText(object_data.getInt("temp") + " °C");
         //System.out.println(object_data.getString("city_name"));
         city.setText(object_data.getString("city_name"));
         //System.out.println(object_data.getString("app_temp"));
-        
+        URL placeZone = new URL("http://worldtimeapi.org/api/timezone/" + object_data.getString("timezone"));
+        HttpURLConnection bridge = (HttpURLConnection) placeZone.openConnection();
+        bridge.setRequestMethod("GET");
+        bridge.setRequestProperty("User-Agent", "Mozilla/5.0");
+        BufferedReader input = new BufferedReader(
+                new InputStreamReader(bridge.getInputStream()));
+        String inputText;
+        StringBuffer timeResponse = new StringBuffer();
+        while ((inputText = input.readLine()) != null) {
+            timeResponse.append(inputText);
+        }
+        input.close();
+
+        JSONObject myTimeResponse = new JSONObject(timeResponse.toString());
+        //offset + time local
+        String dateTime = myTimeResponse.getString("datetime");
+        String utc_offset = myTimeResponse.getString("utc_offset");
+        String hourThemText = utc_offset;
+        if (hourThemText.charAt(0) == '+') {
+            String numString = "";
+            for (int start = 1; start < hourThemText.length(); start++) {
+                if (hourThemText.charAt(start) == ':') {
+                    hourThem = Integer.parseInt(numString);
+                    break;
+                } else {
+                    numString += hourThemText.charAt(start);
+                }
+            }
+        } else {
+            String numString = "";
+            for (int start = 1; start < hourThemText.length(); start++) {
+                if (hourThemText.charAt(start) == ':') {
+                    hourThem = Integer.parseInt(numString) - (Integer.parseInt(numString));
+                    break;
+                } else {
+                    numString += hourThemText.charAt(start);
+                }
+
+            }
+        }
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        Date date = format.parse(dateTime);
+        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
+        System.out.println(date);
+        String dateUpdate = DATE_FORMAT.format(date);
+        d_or_n_them.setText(dateUpdate + "");
+        d_or_n_us.setText(DATE_FORMAT.format(new Date()));
+
     }
 }
