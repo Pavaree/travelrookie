@@ -65,7 +65,7 @@ public class Money extends javax.swing.JInternalFrame {
 
         Exchang_txt.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
         Exchang_txt.setForeground(new java.awt.Color(255, 255, 255));
-        Exchang_txt.setText("Exchange money");
+        Exchang_txt.setText(" Exchange money");
 
         money_got.setText("Money");
         money_got.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -123,27 +123,27 @@ public class Money extends javax.swing.JInternalFrame {
                     .addComponent(jLabel2))
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page_moneyLayout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(page_moneyLayout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90)
                         .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(page_moneyLayout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addComponent(Exchang_txt)))))
+                            .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(160, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_moneyLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(291, 291, 291))
         );
         page_moneyLayout.setVerticalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(page_moneyLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(59, 59, 59)
                 .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85)
+                .addGap(87, 87, 87)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -154,7 +154,7 @@ public class Money extends javax.swing.JInternalFrame {
                     .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -165,7 +165,7 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
         );
 
         pack();
