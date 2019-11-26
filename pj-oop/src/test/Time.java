@@ -87,19 +87,21 @@ public class Time extends javax.swing.JInternalFrame {
         time_us = new javax.swing.JLabel();
         imgtemp = new javax.swing.JLabel();
         Temparature = new javax.swing.JLabel();
-        time = new javax.swing.JLabel();
+        date = new javax.swing.JLabel();
         time_them = new javax.swing.JLabel();
         temp = new javax.swing.JLabel();
         city = new javax.swing.JLabel();
         d_or_n_us = new javax.swing.JLabel();
         d_or_n_them = new javax.swing.JLabel();
+        time1 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(640, 640));
 
         Time_and_temp.setBackground(new java.awt.Color(8, 126, 145));
         Time_and_temp.setPreferredSize(new java.awt.Dimension(940, 660));
+        Time_and_temp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        time_us.setFont(new java.awt.Font("Yu Gothic UI", 0, 48)); // NOI18N
+        time_us.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         time_us.setForeground(new java.awt.Color(255, 255, 255));
         time_us.setText("--:--:--");
         time_us.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -107,99 +109,51 @@ public class Time extends javax.swing.JInternalFrame {
                 time_usPropertyChange(evt);
             }
         });
+        Time_and_temp.add(time_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 180, 87));
 
         imgtemp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_snowy_sunny_day_100px.png"))); // NOI18N
+        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 122, -1));
 
         Temparature.setBackground(new java.awt.Color(0, 156, 134));
-        Temparature.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        Temparature.setFont(new java.awt.Font("Harlow Solid Italic", 0, 50)); // NOI18N
         Temparature.setForeground(new java.awt.Color(255, 255, 255));
         Temparature.setText("Temparature");
+        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 280, 87));
 
-        time.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
-        time.setForeground(new java.awt.Color(255, 255, 255));
-        time.setText("Time");
+        date.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
+        date.setForeground(new java.awt.Color(255, 255, 255));
+        date.setText(" Date :");
+        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, 150, -1));
 
-        time_them.setFont(new java.awt.Font("Yu Gothic UI", 0, 48)); // NOI18N
+        time_them.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         time_them.setForeground(new java.awt.Color(255, 255, 255));
         time_them.setText("--:--:--");
+        Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 170, 87));
 
-        temp.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        temp.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         temp.setForeground(new java.awt.Color(255, 255, 255));
         temp.setText("Temp");
+        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 120, -1));
 
-        city.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        city.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
         city.setForeground(new java.awt.Color(255, 255, 255));
         city.setText("City");
+        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 260, -1));
 
-        d_or_n_us.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        d_or_n_us.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         d_or_n_us.setForeground(new java.awt.Color(255, 255, 255));
         d_or_n_us.setText("dorn");
+        Time_and_temp.add(d_or_n_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 220, -1));
 
-        d_or_n_them.setFont(new java.awt.Font("Yu Gothic UI", 0, 36)); // NOI18N
+        d_or_n_them.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         d_or_n_them.setForeground(new java.awt.Color(255, 255, 255));
         d_or_n_them.setText("dorn");
+        Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 200, -1));
 
-        javax.swing.GroupLayout Time_and_tempLayout = new javax.swing.GroupLayout(Time_and_temp);
-        Time_and_temp.setLayout(Time_and_tempLayout);
-        Time_and_tempLayout.setHorizontalGroup(
-            Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Time_and_tempLayout.createSequentialGroup()
-                .addGap(172, 172, 172)
-                .addComponent(time_us)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
-                .addComponent(time_them)
-                .addGap(214, 214, 214))
-            .addGroup(Time_and_tempLayout.createSequentialGroup()
-                .addGroup(Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(Time_and_tempLayout.createSequentialGroup()
-                            .addGap(326, 326, 326)
-                            .addComponent(Temparature))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Time_and_tempLayout.createSequentialGroup()
-                            .addGap(29, 29, 29)
-                            .addComponent(imgtemp, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(39, 39, 39)
-                            .addComponent(temp)))
-                    .addGroup(Time_and_tempLayout.createSequentialGroup()
-                        .addGap(425, 425, 425)
-                        .addComponent(city))
-                    .addGroup(Time_and_tempLayout.createSequentialGroup()
-                        .addGap(410, 410, 410)
-                        .addComponent(time)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(Time_and_tempLayout.createSequentialGroup()
-                .addGap(198, 198, 198)
-                .addComponent(d_or_n_us)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(d_or_n_them)
-                .addGap(243, 243, 243))
-        );
-        Time_and_tempLayout.setVerticalGroup(
-            Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Time_and_tempLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(Temparature, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Time_and_tempLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(city)
-                        .addGap(16, 16, 16)
-                        .addComponent(imgtemp))
-                    .addGroup(Time_and_tempLayout.createSequentialGroup()
-                        .addGap(102, 102, 102)
-                        .addComponent(temp)))
-                .addGap(18, 18, 18)
-                .addComponent(time)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(time_us, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(time_them, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Time_and_tempLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(d_or_n_us)
-                    .addComponent(d_or_n_them))
-                .addContainerGap(96, Short.MAX_VALUE))
-        );
+        time1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
+        time1.setForeground(new java.awt.Color(255, 255, 255));
+        time1.setText("Time :");
+        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 140, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,7 +163,7 @@ public class Time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
+            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
         );
 
         pack();
@@ -226,9 +180,10 @@ public class Time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel city;
     private javax.swing.JLabel d_or_n_them;
     private javax.swing.JLabel d_or_n_us;
+    private javax.swing.JLabel date;
     private javax.swing.JLabel imgtemp;
     private javax.swing.JLabel temp;
-    private javax.swing.JLabel time;
+    private javax.swing.JLabel time1;
     private javax.swing.JLabel time_them;
     private javax.swing.JLabel time_us;
     // End of variables declaration//GEN-END:variables
@@ -357,7 +312,8 @@ public class Time extends javax.swing.JInternalFrame {
             String numString = "";
             for (int start = 1; start < hourThemText.length(); start++) {
                 if (hourThemText.charAt(start) == ':') {
-                    hourThem = Integer.parseInt(numString) - (Integer.parseInt(numString));
+                    hourThem = Integer.parseInt(numString) - (Integer.parseInt(numString)) * 2;
+                    System.out.println(hourThem);
                     break;
                 } else {
                     numString += hourThemText.charAt(start);
