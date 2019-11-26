@@ -50,7 +50,17 @@ public class Place extends javax.swing.JInternalFrame {
             img3.setIcon(new ImageIcon("src\\aus\\sydneyopera.jpg"));
             name3.setText("Sydneyopera");
             season3.setText("ช่วงเวลาที่เหมาะสม ช่วงคริสต์มาสถึงปีใหม่");
-        }
+//        }else if(page.place.equals("Australia")){
+//            img1.setIcon(new ImageIcon("src\\aus\\12apostles.jpg"));
+//            name1.setText("Apostles");
+//            season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+//            img2.setIcon(new ImageIcon("src\\aus\\bondibeach.jpg"));
+//            name2.setText("Bondibeach");
+//            season2.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+//            img3.setIcon(new ImageIcon("src\\aus\\sydneyopera.jpg"));
+//            name3.setText("Sydneyopera");
+//            season3.setText("ช่วงเวลาที่เหมาะสม ช่วงคริสต์มาสถึงปีใหม่");
+//        }
     }
 
     /**
