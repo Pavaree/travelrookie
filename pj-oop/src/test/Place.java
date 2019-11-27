@@ -91,6 +91,59 @@ public class Place extends javax.swing.JInternalFrame {
             name3.setText("City Hall Square");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         }
+         else if (page.place.equals("Hungary")) {
+            img1.setIcon(new ImageIcon("src\\hungary\\budacastle.jpg"));
+            name1.setText("Buda Castle");
+            season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล แต่จะให้ดีที่สุดคือ ฤดูร้อน");
+            img2.setIcon(new ImageIcon("src\\hungary\\Szechenyi-Baths.jpg"));
+            name2.setText("Széchenyi Thermal Bath");
+            season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            img3.setIcon(new ImageIcon("src\\hungary\\gellerthill.jpg"));
+            name3.setText("Gellert Hill");
+            season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+        }else if (page.place.equals("Iceland")) {
+            img1.setIcon(new ImageIcon("src\\iceland\\bluelagoon.jpg"));
+            name1.setText("Blue Lagoon");
+            season1.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
+            img2.setIcon(new ImageIcon("src\\iceland\\hallgrimskirkja.jpg"));
+            name2.setText("Hallgrimskirkja");
+            season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            img3.setIcon(new ImageIcon("src\\iceland\\gullfoss.jpg"));
+            name3.setText("Gullfoss");
+            season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+        }else if (page.place.equals("Indonesia")) {
+            img1.setIcon(new ImageIcon("src\\indonesia\\Bali.jpg"));
+            name1.setText("Bali");
+            season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            img2.setIcon(new ImageIcon("src\\indonesia\\borobudur.jpg"));
+            name2.setText("Borobudur");
+            season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            img3.setIcon(new ImageIcon("src\\indonesia\\bunaken.jpg"));
+            name3.setText("Bunaken");
+            season3.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+        }
+        else if (page.place.equals("Japan")) {
+            img1.setIcon(new ImageIcon("src\\japan\\fuji.jpg"));
+            name1.setText("Fuji");
+            season1.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว ฤดุใบไม้ผลิ ฤดูใบไม้ร่วง");
+            img2.setIcon(new ImageIcon("src\\japan\\hokkaido.jpg"));
+            name2.setText("Hokkaido");
+            season2.setText("ช่วงเวลาที่เหมาะสม ช่วงกลางปีจนถึงฤดูร้อน");
+            img3.setIcon(new ImageIcon("src\\japan\\Shirakawa-go.jpg"));
+            name3.setText("Shirakawa-go");
+            season3.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
+        }
+        else if (page.place.equals("Thailand")) {
+            img1.setIcon(new ImageIcon("src\\thailand\\Tarutao-National-Park-.jpg"));
+            name1.setText("Tarutao National Park");
+            season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+            img2.setIcon(new ImageIcon("src\\thailand\\Intanon.jpg"));
+            name2.setText("Intanon");
+            season2.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
+            img3.setIcon(new ImageIcon("src\\thailand\\amphawa.jpg"));
+            name3.setText("Amphawa Floating Market");
+            season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+        }
     }
 
     /**
