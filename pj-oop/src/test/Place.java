@@ -87,7 +87,7 @@ public class Place extends javax.swing.JInternalFrame {
             img2.setIcon(new ImageIcon("src\\denmark\\Torshavn.jpg"));
             name2.setText("Torshavn");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\denmark\\cityhallsquare.jpg"));
+            img3.setIcon(new ImageIcon("src\\denmark\\cityhallsquare.jpeg"));
             name3.setText("City Hall Square");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         }
