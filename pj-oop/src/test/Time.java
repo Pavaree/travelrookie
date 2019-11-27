@@ -18,6 +18,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -94,6 +95,7 @@ public class Time extends javax.swing.JInternalFrame {
         d_or_n_us = new javax.swing.JLabel();
         d_or_n_them = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
+        tell_weather = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(640, 640));
 
@@ -109,51 +111,54 @@ public class Time extends javax.swing.JInternalFrame {
                 time_usPropertyChange(evt);
             }
         });
-        Time_and_temp.add(time_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 180, 87));
-
-        imgtemp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test_imges/icons8_snowy_sunny_day_100px.png"))); // NOI18N
-        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 122, -1));
+        Time_and_temp.add(time_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 180, 87));
+        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 122, 110));
 
         Temparature.setBackground(new java.awt.Color(0, 156, 134));
         Temparature.setFont(new java.awt.Font("Harlow Solid Italic", 0, 50)); // NOI18N
         Temparature.setForeground(new java.awt.Color(255, 255, 255));
         Temparature.setText("Temparature");
-        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 280, 87));
+        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 280, 87));
 
         date.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText(" Date :");
-        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, 150, -1));
+        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 150, -1));
 
         time_them.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         time_them.setForeground(new java.awt.Color(255, 255, 255));
         time_them.setText("--:--:--");
-        Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 170, 87));
+        Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 170, 87));
 
         temp.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         temp.setForeground(new java.awt.Color(255, 255, 255));
         temp.setText("Temp");
-        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 120, -1));
+        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 120, -1));
 
         city.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
         city.setForeground(new java.awt.Color(255, 255, 255));
-        city.setText("City");
-        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 260, -1));
+        city.setText(" City");
+        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 260, -1));
 
         d_or_n_us.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         d_or_n_us.setForeground(new java.awt.Color(255, 255, 255));
         d_or_n_us.setText("dorn");
-        Time_and_temp.add(d_or_n_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 220, -1));
+        Time_and_temp.add(d_or_n_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 220, -1));
 
         d_or_n_them.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         d_or_n_them.setForeground(new java.awt.Color(255, 255, 255));
         d_or_n_them.setText("dorn");
-        Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 200, -1));
+        Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 530, 200, -1));
 
         time1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setText("Time :");
-        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 140, -1));
+        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 140, -1));
+
+        tell_weather.setFont(new java.awt.Font("Harlow Solid Italic", 0, 24)); // NOI18N
+        tell_weather.setForeground(new java.awt.Color(255, 255, 255));
+        tell_weather.setText(" tell_temp");
+        Time_and_temp.add(tell_weather, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 240, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -182,6 +187,7 @@ public class Time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel d_or_n_us;
     private javax.swing.JLabel date;
     private javax.swing.JLabel imgtemp;
+    private javax.swing.JLabel tell_weather;
     private javax.swing.JLabel temp;
     private javax.swing.JLabel time1;
     private javax.swing.JLabel time_them;
@@ -283,8 +289,32 @@ public class Time extends javax.swing.JInternalFrame {
         
         
         JSONObject weather_data = new JSONObject(object_data.getJSONObject("weather").toString());
-        String code = weather_data.getString("code");
-        
+        String code = weather_data.getString("description");
+        if(code.equals("Thunderstorm with light rain")|| code.equals("Thunderstorm with rain")||
+            code.equals("Thunderstorm with heavy rain")|| code.equals("Thunderstorm with light drizzle")||code.equals("Thunderstorm with drizzle")
+            || code.equals("Thunderstorm with heavy drizzle")||code.equals("Thunderstorm with Hail")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Thunders.png"));
+        }else if(code.equals("Light Drizzle")|| code.equals("Drizzle")||
+            code.equals("Heavy Drizzle")|| code.equals("Light Rain")||code.equals("Moderate Rain")||code.equals("Flurries")
+            || code.equals("Heavy Rain")||code.equals("Freezing rain")|| code.equals("Light shower rain")
+            ||code.equals("Shower rain")||code.equals("Heavy shower rain")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Rain.png"));
+        }else if(code.equals("Light snow")|| code.equals("Snow")||code.equals("Snow shower")|| code.equals("Heavy snow shower")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\snow.png"));
+        }else if(code.equals("Heavy Snow")|| code.equals("Mix snow/rain")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\snow_storm.png"));
+        }else if(code.equals("Sleet")|| code.equals("Heavy sleet")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\sleet.png"));
+        }else if(code.equals("Mist")|| code.equals("Smoke")||code.equals("Haze")|| code.equals("Sand/dust")||code.equals("Fog")|| code.equals("Freezing Fog")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\haze.png"));
+        }else if(code.equals("Clear sky")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\moon_and_sunx.png"));
+        }else if(code.equals("Unknown Precipitation")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Precipitation.png"));
+        }else if(code.equals("Few clouds")|| code.equals("Scattered clouds")||code.equals("Broken clouds")|| code.equals("Overcast clouds")){
+            imgtemp.setIcon(new ImageIcon("src\\icon-temp\\clouds.png"));
+        }
+        tell_weather.setText(weather_data.getString("description"));
         
         
         URL placeZone = new URL("http://worldtimeapi.org/api/timezone/" + object_data.getString("timezone"));
