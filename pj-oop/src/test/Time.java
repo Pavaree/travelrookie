@@ -280,6 +280,13 @@ public class Time extends javax.swing.JInternalFrame {
         //System.out.println(object_data.getString("city_name"));
         city.setText(object_data.getString("city_name"));
         //System.out.println(object_data.getString("app_temp"));
+        
+        
+        JSONObject weather_data = new JSONObject(object_data.getJSONObject("weather").toString());
+        String code = weather_data.getString("code");
+        
+        
+        
         URL placeZone = new URL("http://worldtimeapi.org/api/timezone/" + object_data.getString("timezone"));
         HttpURLConnection bridge = (HttpURLConnection) placeZone.openConnection();
         bridge.setRequestMethod("GET");
