@@ -294,9 +294,9 @@ public class Time extends javax.swing.JInternalFrame {
             code.equals("Thunderstorm with heavy rain")|| code.equals("Thunderstorm with light drizzle")||code.equals("Thunderstorm with drizzle")
             || code.equals("Thunderstorm with heavy drizzle")||code.equals("Thunderstorm with Hail")){
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Thunders.png"));
-        }else if(code.equals("Light Drizzle")|| code.equals("Drizzle")||
-            code.equals("Heavy Drizzle")|| code.equals("Light Rain")||code.equals("Moderate Rain")||code.equals("Flurries")
-            || code.equals("Heavy Rain")||code.equals("Freezing rain")|| code.equals("Light shower rain")
+        }else if(code.equals("Light drizzle")|| code.equals("Drizzle")||
+            code.equals("Heavy drizzle")|| code.equals("Light rain")||code.equals("Moderate rain")||code.equals("Flurries")
+            || code.equals("Heavy rain")||code.equals("Freezing rain")|| code.equals("Light shower rain")
             ||code.equals("Shower rain")||code.equals("Heavy shower rain")){
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Rain.png"));
         }else if(code.equals("Light snow")|| code.equals("Snow")||code.equals("Snow shower")|| code.equals("Heavy snow shower")){
@@ -305,7 +305,7 @@ public class Time extends javax.swing.JInternalFrame {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\snow_storm.png"));
         }else if(code.equals("Sleet")|| code.equals("Heavy sleet")){
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\sleet.png"));
-        }else if(code.equals("Mist")|| code.equals("Smoke")||code.equals("Haze")|| code.equals("Sand/dust")||code.equals("Fog")|| code.equals("Freezing Fog")){
+        }else if(code.equals("Mist")|| code.equals("Smoke")||code.equals("Haze")|| code.equals("Sand/dust")||code.equals("Fog")|| code.equals("Freezing fog")){
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\haze.png"));
         }else if(code.equals("Clear sky")){
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\moon_and_sunx.png"));
