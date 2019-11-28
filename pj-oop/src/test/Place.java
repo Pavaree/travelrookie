@@ -267,19 +267,24 @@ public class Place extends javax.swing.JInternalFrame {
         txt_recommended.setText("Recommended Place");
 
         name1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
+        name1.setForeground(new java.awt.Color(255, 255, 255));
         name1.setText("name1");
 
-        season1.setFont(new java.awt.Font("CordiaUPC", 0, 18)); // NOI18N
+        season1.setForeground(new java.awt.Color(255, 255, 255));
         season1.setText("season1");
 
         name2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
+        name2.setForeground(new java.awt.Color(255, 255, 255));
         name2.setText("name2");
 
+        season2.setForeground(new java.awt.Color(255, 255, 255));
         season2.setText("season2");
 
         name3.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
+        name3.setForeground(new java.awt.Color(255, 255, 255));
         name3.setText("name3");
 
+        season3.setForeground(new java.awt.Color(255, 255, 255));
         season3.setText("season3");
 
         img1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -333,7 +338,7 @@ public class Place extends javax.swing.JInternalFrame {
                     .addComponent(name1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(name3)
                     .addComponent(name2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(season2)
                     .addComponent(season3)
@@ -349,7 +354,7 @@ public class Place extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Page_place, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(Page_place, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
         );
 
         pack();
