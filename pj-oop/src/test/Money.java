@@ -59,11 +59,13 @@ public class Money extends javax.swing.JInternalFrame {
         contry_us = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         page_money.setBackground(new java.awt.Color(0, 156, 134));
         page_money.setPreferredSize(new java.awt.Dimension(930, 630));
 
-        Exchang_txt.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        Exchang_txt.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
         Exchang_txt.setForeground(new java.awt.Color(255, 255, 255));
         Exchang_txt.setText(" Exchange money");
 
@@ -108,53 +110,67 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("เงินของคุณที่จะเปลี่ยน");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("ค่าสกุลเงินที่เปลี่ยนแล้ว");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("jLabel3");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout page_moneyLayout = new javax.swing.GroupLayout(page_money);
         page_money.setLayout(page_moneyLayout);
         page_moneyLayout.setHorizontalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(page_moneyLayout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(90, 90, 90)
-                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(160, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_moneyLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(301, Short.MAX_VALUE)
                 .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(291, 291, 291))
+            .addGroup(page_moneyLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(page_moneyLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(page_moneyLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(111, 111, 111)
+                        .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(61, 61, 61)
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(money_us)
+                    .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         page_moneyLayout.setVerticalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(page_moneyLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
+                .addGap(88, 88, 88)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3))
                     .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel1)))
-                .addGap(84, 84, 84)
+                .addGap(83, 83, 83)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addContainerGap(239, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -165,7 +181,7 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
         );
 
         pack();
@@ -297,6 +313,8 @@ public class Money extends javax.swing.JInternalFrame {
                 url = "https://api.exchangeratesapi.io/latest?base=HRK";
             } else if (first.equals("Denmark")) {
                 url = "https://api.exchangeratesapi.io/latest?base=DKK";
+            } else if (first.equals("Thailand")) {
+                url = "https://api.exchangeratesapi.io/latest?base=THB";
             }
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -334,6 +352,8 @@ public class Money extends javax.swing.JInternalFrame {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HRK") + "");
             } else if (second.equals("Denmark")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("DKK") + "");
+            } else if (second.equals("Thailand")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("THB") + "");
             }
 
         } catch (IOException ex) {
@@ -356,6 +376,8 @@ public class Money extends javax.swing.JInternalFrame {
                 url = "https://api.exchangeratesapi.io/latest?base=HRK";
             } else if (second.equals("Denmark")) {
                 url = "https://api.exchangeratesapi.io/latest?base=DKK";
+            } else if (second.equals("Thailand")) {
+                url = "https://api.exchangeratesapi.io/latest?base=THB";
             }
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -405,6 +427,8 @@ public class Money extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> contry_us;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField money_got;
     private javax.swing.JTextField money_us;
     private javax.swing.JPanel page_money;

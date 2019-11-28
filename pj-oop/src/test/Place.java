@@ -262,18 +262,18 @@ public class Place extends javax.swing.JInternalFrame {
         Page_place.setPreferredSize(new java.awt.Dimension(930, 630));
         Page_place.setRequestFocusEnabled(false);
 
-        txt_recommended.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        txt_recommended.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
         txt_recommended.setForeground(new java.awt.Color(255, 255, 255));
         txt_recommended.setText("Recommended Place");
 
-        name1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
+        name1.setFont(new java.awt.Font("Consolas", 0, 26)); // NOI18N
         name1.setForeground(new java.awt.Color(255, 255, 255));
         name1.setText("name1");
 
         season1.setForeground(new java.awt.Color(255, 255, 255));
         season1.setText("season1");
 
-        name2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
+        name2.setFont(new java.awt.Font("Consolas", 0, 26)); // NOI18N
         name2.setForeground(new java.awt.Color(255, 255, 255));
         name2.setText("name2");
 
@@ -354,7 +354,7 @@ public class Place extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Page_place, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+            .addComponent(Page_place, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
         );
 
         pack();

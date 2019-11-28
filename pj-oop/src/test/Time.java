@@ -115,7 +115,7 @@ public class Time extends javax.swing.JInternalFrame {
         Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 122, 110));
 
         Temparature.setBackground(new java.awt.Color(0, 156, 134));
-        Temparature.setFont(new java.awt.Font("Harlow Solid Italic", 0, 50)); // NOI18N
+        Temparature.setFont(new java.awt.Font("Consolas", 0, 50)); // NOI18N
         Temparature.setForeground(new java.awt.Color(255, 255, 255));
         Temparature.setText("Temparature");
         Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 280, 87));
@@ -130,12 +130,12 @@ public class Time extends javax.swing.JInternalFrame {
         time_them.setText("--:--:--");
         Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 170, 87));
 
-        temp.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
+        temp.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         temp.setForeground(new java.awt.Color(255, 255, 255));
         temp.setText("Temp");
         Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 120, -1));
 
-        city.setFont(new java.awt.Font("Harlow Solid Italic", 0, 48)); // NOI18N
+        city.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
         city.setForeground(new java.awt.Color(255, 255, 255));
         city.setText(" City");
         Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 260, -1));
@@ -150,12 +150,12 @@ public class Time extends javax.swing.JInternalFrame {
         d_or_n_them.setText("dorn");
         Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 530, 200, -1));
 
-        time1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
+        time1.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setText("Time :");
         Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 140, -1));
 
-        tell_weather.setFont(new java.awt.Font("Harlow Solid Italic", 0, 24)); // NOI18N
+        tell_weather.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         tell_weather.setForeground(new java.awt.Color(255, 255, 255));
         tell_weather.setText(" tell_temp");
         Time_and_temp.add(tell_weather, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 240, 80));

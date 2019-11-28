@@ -11,6 +11,7 @@ import javax.swing.*;
 /**
  *
  * @author Pavaree
+ * 
  */
 public class TravelRookie extends javax.swing.JFrame {
     public String place;
