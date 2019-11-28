@@ -273,7 +273,7 @@ public class Place extends javax.swing.JInternalFrame {
         Page_place.setPreferredSize(new java.awt.Dimension(930, 630));
         Page_place.setRequestFocusEnabled(false);
 
-        txt_recommended.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
+        txt_recommended.setFont(new java.awt.Font("OCR A Extended", 0, 48)); // NOI18N
         txt_recommended.setForeground(new java.awt.Color(255, 255, 255));
         txt_recommended.setText("Recommended Place");
 
@@ -291,7 +291,7 @@ public class Place extends javax.swing.JInternalFrame {
         season2.setForeground(new java.awt.Color(255, 255, 255));
         season2.setText("season2");
 
-        name3.setFont(new java.awt.Font("Harlow Solid Italic", 0, 26)); // NOI18N
+        name3.setFont(new java.awt.Font("Consolas", 0, 26)); // NOI18N
         name3.setForeground(new java.awt.Color(255, 255, 255));
         name3.setText("name3");
 
