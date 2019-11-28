@@ -62,7 +62,7 @@ public class Home extends javax.swing.JInternalFrame {
 
         choose_txt.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         choose_txt.setForeground(new java.awt.Color(255, 255, 255));
-        choose_txt.setText("Choose your place to travel");
+        choose_txt.setText("Choose your place to travel !");
 
         choose_country.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
         choose_country.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +136,7 @@ public class Home extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
         );
 
         pack();
