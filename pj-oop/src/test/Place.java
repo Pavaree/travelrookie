@@ -318,10 +318,10 @@ public class Place extends javax.swing.JInternalFrame {
                         .addGap(57, 57, 57)
                         .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(47, 47, 47))
-            .addGroup(Page_placeLayout.createSequentialGroup()
-                .addGap(261, 261, 261)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Page_placeLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txt_recommended)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(240, 240, 240))
         );
         Page_placeLayout.setVerticalGroup(
             Page_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

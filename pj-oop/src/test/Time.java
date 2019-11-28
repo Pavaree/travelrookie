@@ -96,6 +96,8 @@ public class Time extends javax.swing.JInternalFrame {
         d_or_n_them = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
         tell_weather = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(640, 640));
 
@@ -111,54 +113,60 @@ public class Time extends javax.swing.JInternalFrame {
                 time_usPropertyChange(evt);
             }
         });
-        Time_and_temp.add(time_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 180, 87));
-        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 122, 110));
+        Time_and_temp.add(time_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 180, 87));
+        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 122, 110));
 
         Temparature.setBackground(new java.awt.Color(0, 156, 134));
         Temparature.setFont(new java.awt.Font("Consolas", 0, 50)); // NOI18N
         Temparature.setForeground(new java.awt.Color(255, 255, 255));
         Temparature.setText("Temparature");
-        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 280, 87));
+        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 300, 87));
 
         date.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText(" Date :");
-        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, 150, -1));
+        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 150, -1));
 
         time_them.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         time_them.setForeground(new java.awt.Color(255, 255, 255));
         time_them.setText("--:--:--");
-        Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 170, 87));
+        Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, 170, 87));
 
         temp.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         temp.setForeground(new java.awt.Color(255, 255, 255));
         temp.setText("Temp");
-        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 120, -1));
+        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 120, -1));
 
         city.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
         city.setForeground(new java.awt.Color(255, 255, 255));
         city.setText(" City");
-        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 260, -1));
+        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 260, -1));
 
         d_or_n_us.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         d_or_n_us.setForeground(new java.awt.Color(255, 255, 255));
         d_or_n_us.setText("dorn");
-        Time_and_temp.add(d_or_n_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 220, -1));
+        Time_and_temp.add(d_or_n_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 550, 220, -1));
 
         d_or_n_them.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
         d_or_n_them.setForeground(new java.awt.Color(255, 255, 255));
         d_or_n_them.setText("dorn");
-        Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 530, 200, -1));
+        Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 550, 200, -1));
 
         time1.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setText("Time :");
-        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 140, -1));
+        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 140, -1));
 
         tell_weather.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         tell_weather.setForeground(new java.awt.Color(255, 255, 255));
         tell_weather.setText(" tell_temp");
-        Time_and_temp.add(tell_weather, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 240, 80));
+        Time_and_temp.add(tell_weather, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 240, 80));
+
+        jLabel1.setText("Time Them");
+        Time_and_temp.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, -1, -1));
+
+        jLabel2.setText("Time us");
+        Time_and_temp.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,7 +176,7 @@ public class Time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
         );
 
         pack();
@@ -187,6 +195,8 @@ public class Time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel d_or_n_us;
     private javax.swing.JLabel date;
     private javax.swing.JLabel imgtemp;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel tell_weather;
     private javax.swing.JLabel temp;
     private javax.swing.JLabel time1;
@@ -239,22 +249,82 @@ public class Time extends javax.swing.JInternalFrame {
                 place = "?city=Zagreb";
             } else if (main.place.equals("Denmark")) {
                 place = "?city=Copenhagen";
-            }
+            } else if (main.place.equals("Hungary")) {
+                place = "?city=Budapest";
+            } else if (main.place.equals("Iceland")) {
+                place = "?city=Reykjavik";
+            } else if (main.place.equals("Indonesia")) {
+                place = "?city=Jakarta";
+            } else if (main.place.equals("Japan")) {
+                place = "?city=Tokyo";
+            } else if (main.place.equals("Korea")) {
+                place = "?city=South Korea";
+            } else if (main.place.equals("Mexico")) {
+                place = "?city=Mexico";
+            } else if (main.place.equals("Norway")) {
+                place = "?city=Oslo";
+            } else if (main.place.equals("Singapore")) {
+                place = "?city=Singapore";
+            } else if (main.place.equals("South Africa")) {
+                place = "?city=Cape Town";
+            } else if (main.place.equals("Sweden")) {
+                place = "?city=Stockholm";
+            } else if (main.place.equals("Switzerland")) {
+                place = "?city=Bern";
+            } else if (main.place.equals("Thailand")) {
+                place = "?city=Bangkok";
+            } else if (main.place.equals("Turkey")) {
+                place = "?city=Ankara";
+            } else if (main.place.equals("United Kingdom")) {
+                place = "?city=London";
+            } else if (main.place.equals("United States")) {
+                place = "?city=Washington";
+            } 
 
         } else {
 
             //not from Home class
-            if (placeSelect.equals("Australia")) {
+            if (main.place.equals("Australia")) {
                 place = "?city=Canberra";
-            } else if (placeSelect.equals("Canada")) {
+            } else if (main.place.equals("Canada")) {
                 place = "?city=Ottawa";
-            } else if (placeSelect.equals("China")) {
+            } else if (main.place.equals("China")) {
                 place = "?city=Beijing";
-            } else if (placeSelect.equals("Croatia")) {
+            } else if (main.place.equals("Croatia")) {
                 place = "?city=Zagreb";
-            } else if (placeSelect.equals("Denmark")) {
+            } else if (main.place.equals("Denmark")) {
                 place = "?city=Copenhagen";
-            }
+            } else if (main.place.equals("Hungary")) {
+                place = "?city=Budapest";
+            } else if (main.place.equals("Iceland")) {
+                place = "?city=Reykjavik";
+            } else if (main.place.equals("Indonesia")) {
+                place = "?city=Jakarta";
+            } else if (main.place.equals("Japan")) {
+                place = "?city=Tokyo";
+            } else if (main.place.equals("Korea")) {
+                place = "?city=South Korea";
+            } else if (main.place.equals("Mexico")) {
+                place = "?city=Mexico";
+            } else if (main.place.equals("Norway")) {
+                place = "?city=Oslo";
+            } else if (main.place.equals("Singapore")) {
+                place = "?city=Singapore";
+            } else if (main.place.equals("South Africa")) {
+                place = "?city=Cape Town";
+            } else if (main.place.equals("Sweden")) {
+                place = "?city=Stockholm";
+            } else if (main.place.equals("Switzerland")) {
+                place = "?city=Bern";
+            } else if (main.place.equals("Thailand")) {
+                place = "?city=Bangkok";
+            } else if (main.place.equals("Turkey")) {
+                place = "?city=Ankara";
+            } else if (main.place.equals("United Kingdom")) {
+                place = "?city=London";
+            } else if (main.place.equals("United States")) {
+                place = "?city=Washington";
+            } 
         }
         URL obj = new URL(url + place + key);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();

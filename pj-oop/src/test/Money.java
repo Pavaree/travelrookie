@@ -79,7 +79,7 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
-        contry_need.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
+        contry_need.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (Baht)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
         contry_need.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contry_needActionPerformed(evt);
@@ -103,7 +103,7 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
-        contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia", "Canada", "China", "Croatia", "Denmark", "Hungary", "Iceland", "Indonesia", "Japan", "Korea", "Mexico", "Norway", "Singapore", "South Africa", "Sweden", "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States" }));
+        contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (Baht)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
         contry_us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contry_usActionPerformed(evt);
@@ -126,37 +126,38 @@ public class Money extends javax.swing.JInternalFrame {
         page_money.setLayout(page_moneyLayout);
         page_moneyLayout.setHorizontalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_moneyLayout.createSequentialGroup()
-                .addContainerGap(301, Short.MAX_VALUE)
-                .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(291, 291, 291))
             .addGroup(page_moneyLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(page_moneyLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(page_moneyLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(111, 111, 111)
+                                .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(61, 61, 61)
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(money_us)
+                            .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52)
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)))
                     .addGroup(page_moneyLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(111, 111, 111)
-                        .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(61, 61, 61)
-                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(money_us)
-                    .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
-                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(242, 242, 242)
+                        .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         page_moneyLayout.setVerticalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(page_moneyLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(58, 58, 58)
                 .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
+                .addGap(89, 89, 89)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -170,7 +171,7 @@ public class Money extends javax.swing.JInternalFrame {
                     .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel4))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -181,7 +182,7 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
         );
 
         pack();
@@ -303,7 +304,7 @@ public class Money extends javax.swing.JInternalFrame {
             String first = contry_us.getSelectedItem().toString();
             String second = contry_need.getSelectedItem().toString();
             String url = "";
-            if (first.equals("Australia")) {
+            if (first.equals("Australia (AUD)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=AUD";
             } else if (first.equals("Canada")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CAD";
@@ -313,8 +314,36 @@ public class Money extends javax.swing.JInternalFrame {
                 url = "https://api.exchangeratesapi.io/latest?base=HRK";
             } else if (first.equals("Denmark")) {
                 url = "https://api.exchangeratesapi.io/latest?base=DKK";
-            } else if (first.equals("Thailand")) {
+            } else if (first.equals("Thailand (Baht)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=THB";
+            } else if (first.equals("Hungary (HUF)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=HUF";
+            } else if (first.equals("Iceland (ISK)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=ISK";
+            } else if (first.equals("Indonesia (IDR)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=IDR";
+            } else if (first.equals("Japan (JPY)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=JPY";
+            } else if (first.equals("Korea (Won)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=KRW";
+            } else if (first.equals("Mexico (MXN)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=MXN";
+            } else if (first.equals("Norway (NOK)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=NOK";
+            } else if (first.equals("Singapore (SGD)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=SGD";
+            } else if (first.equals("South Africa (ZAR)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=ZAR";
+            } else if (first.equals("Sweden (SEK)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=SEK";
+            } else if (first.equals("Switzerland (CHF)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CHF";
+            } else if (first.equals("Turkey (TRY)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=TRY";
+            } else if (first.equals("United Kingdom (GBP)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=GBP";
+            } else if (first.equals("United States (USD)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=USD";
             }
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -342,18 +371,46 @@ public class Money extends javax.swing.JInternalFrame {
             JSONObject rates = new JSONObject(myResponse.getJSONObject("rates").toString());
             System.out.println(rates);
 
-            if (second.equals("Australia")) {
+            if (second.equals("Australia (AUD)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("AUD") + "");
-            } else if (second.equals("Canada")) {
+            } else if (second.equals("Canada (CAD)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CAD") + "");
-            } else if (second.equals("China")) {
+            } else if (second.equals("China (CNY)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CNY") + "");
-            } else if (second.equals("Croatia")) {
+            } else if (second.equals("Croatia (HRK)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HRK") + "");
-            } else if (second.equals("Denmark")) {
+            } else if (second.equals("Denmark (DKK)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("DKK") + "");
-            } else if (second.equals("Thailand")) {
+            } else if (second.equals("Thailand (Baht)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("THB") + "");
+            } else if (second.equals("Hungary (HUF)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HUF") + "");
+            } else if (second.equals("Iceland (ISK)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("ISK") + "");
+            } else if (second.equals("Indonesia (IDR)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("IDR") + "");
+            } else if (second.equals("Japan (JPY)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("JPY") + "");
+            } else if (second.equals("Korea (Won)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("KRW") + "");
+            } else if (second.equals("Mexico (MXN)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("MXN") + "");
+            }else if (second.equals("Norway (NOK)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("NOK") + "");
+            } else if (second.equals("Singapore (SGD)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("SGD") + "");
+            } else if (second.equals("South Africa (ZAR)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("ZAR") + "");
+            } else if (second.equals("Sweden (SEK)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("SEK") + "");
+            } else if (second.equals("Switzerland (CHF)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CHF") + "");
+            } else if (second.equals("Turkey (TRY)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("TRY") + "");
+            }else if (second.equals("United Kingdom (GBP)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("GBP") + "");
+            } else if (second.equals("United States (USD)")) {
+                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("USD") + "");
             }
 
         } catch (IOException ex) {
