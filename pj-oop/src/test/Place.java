@@ -80,12 +80,18 @@ public class Place extends javax.swing.JInternalFrame {
             img1.setIcon(new ImageIcon("src\\china\\798 Art District_5.jpg"));
             name1.setText("798 Art District");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            jTextField1.setText("เป็นชุมชนศิลปินขนาดใหญ่ที่มีชื่อเสียงมากของจีน ตั้งอยู่ใจกลางกรุงปักกิ่ง\n" +
+"สมัยก่อนโรงงาน 798 แห่งนี้เคยเป็นที่ตั้งของโรงงานผลิตอุปกรณ์ไฟฟ้า และอิเล็กทรอนิกส์ ของทหาร\n" +
+"โดยจะเป็นชุมชนศิลปะ งานอาร์ต ร้านของแฮนเมดต่างๆ");
             img2.setIcon(new ImageIcon("src\\china\\Great Wall of China_3.jpg"));
             name2.setText("Great Wall of China");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูใบไม้ผลิ และฤดูหนาว");
+            jTextField2.setText("เป็นสิ่งมหัศจรรย์ของโลกที่มนุษย์สร้างขึ้น โดยเป็นกำแพงที่มีความยาวถึง 21,196.18 กิโลเมตร อย่างที่เรียกกันว่า กําแพงหมื่นลี้ ครอบคลุมพื้นที่ 15 มณฑลทั่วประเทศจีน");
             img3.setIcon(new ImageIcon("src\\china\\Olympic Stadium 2008_3.jpg"));
             name3.setText("The Beijing National Stadium");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            jTextField3.setText("โดยสนามแห่งนี้ได้ใช้ในมหกรรมกีฬาโอลิมปิกในปี 2008 พองานกีฬาได้สิ้นสุดลง\n"
+                    + "ก็ได้เปิดเป็นสถานที่ท่องเที่ยวให้นักท่องเที่ยวเข้ามาชม ถือว่าถ้ามาปักกิ่งแล้วต้องห้ามพลาดค่ะ");
         } else if (page.place.equals("Croatia")) {
             img1.setIcon(new ImageIcon("src\\croatia\\dubrovnikwalls.jpg"));
             name1.setText("Dubrovnik Old Town");
