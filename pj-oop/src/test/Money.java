@@ -314,7 +314,7 @@ public class Money extends javax.swing.JInternalFrame {
                 url = "https://api.exchangeratesapi.io/latest?base=HRK";
             } else if (first.equals("Denmark")) {
                 url = "https://api.exchangeratesapi.io/latest?base=DKK";
-            } else if (first.equals("Thailand (Baht)")) {
+            } else if (first.equals("Thailand (THB)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=THB";
             } else if (first.equals("Hungary (HUF)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=HUF";
@@ -381,7 +381,7 @@ public class Money extends javax.swing.JInternalFrame {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HRK") + "");
             } else if (second.equals("Denmark (DKK)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("DKK") + "");
-            } else if (second.equals("Thailand (Baht)")) {
+            } else if (second.equals("Thailand (THB)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("THB") + "");
             } else if (second.equals("Hungary (HUF)")) {
                 money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HUF") + "");
