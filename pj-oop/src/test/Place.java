@@ -62,12 +62,20 @@ public class Place extends javax.swing.JInternalFrame {
             img1.setIcon(new ImageIcon("src\\canada\\banff-national-park.jpg"));
             name1.setText("Banff National Park");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+            jTextField1.setText("เป็นสถานที่ท่องเที่ยวยอด นิยมมากที่สุดแห่งหนึ่งของแคนาดา ด้วยที่นี่มีพื้นที่ส่วนหนึ่งอยู่ในแนวเทือกเขาร็อกกี เมาน์เทน และมี "
+                    + " จุดชมวิวเทือกเขาร็อกกี เมาน์เทน ที่สวยที่สุดอีกด้วย ทะเลสาบก็ไม่น้อยหน้า มี ความงดงามติดอันดับต้น ๆ ของโลกเลยทีเดียว นั่นก็คือ Lake Louise มีลักษณะเป็นทะเลสาบสีฟ้า "
+                    + " เขียวมรกตสวยใส รายล้อมไปด้วยเทือกเขาสีเขียวสูงใหญ่");
             img2.setIcon(new ImageIcon("src\\canada\\niagara-falls.jpg"));
             name2.setText("Niagara Falls");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
+            jTextField2.setText("าเป็นหนึ่งในน้ำตกที่ยิ่งใหญ่ที่สุด ในโลก ตั้งอยู่ระหว่างชายแดนรัฐนิวยอร์ก ประเทศสหรัฐอเมริกา และรัฐออนตาริโอ ประเทศแคนาดา "
+                    + " ซึ่งน้ำตกแห่งนี้จะประกอบด้วย 3 น้ำตกด้วยกัน คือน้ำตกเกือกม้า (Horseshoe Falls) อยู่ทางฝั่ง แคนาดา, น้ำตกอเมริกา (American Falls) อยู่ทางฝั่งสหรัฐอเมริกา "
+                    + " และน้ำตก Bridal Veil อยู่ทางฝั่ง อเมริกาเช่นกัน");
             img3.setIcon(new ImageIcon("src\\canada\\ottawa.jpg"));
             name3.setText("Ottawa");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
+            jTextField3.setText("เป็น เมืองหลวงที่มีเสน่ห์มากที่สุดแห่งหนึ่งของโลก ใครที่หลงใหลในสถาปัตยกรรมฟื้นฟูโกธิค (Gothic Revival architecture) จะต้องหลงรักเมืองแห่งนี้แน่นอน"
+                    + " ที่นี่ไม่ค่อยมีตึกและอาคารสูง ๆ รูปแบบทันสมัยเยอะ มากนัก รอบ ๆ เมืองเราจะได้เห็นอาคารในรูปแบบสถาปัตยกรรมฟื้นฟูโกธิคเสียเป็นส่วนใหญ่");
         } else if (page.place.equals("China")) {
             img1.setIcon(new ImageIcon("src\\china\\798 Art District_5.jpg"));
             name1.setText("798 Art District");
