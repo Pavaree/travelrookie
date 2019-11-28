@@ -22,6 +22,9 @@ public class TravelRookie extends javax.swing.JFrame {
     
     public TravelRookie() {
         initComponents();
+        btn_place.setVisible(false);
+        btn_money.setVisible(false);
+        btn_time_emp.setVisible(false);
         Home h = new Home(this);
         main_page.add(h).setVisible(true);
     }
@@ -164,7 +167,7 @@ public class TravelRookie extends javax.swing.JFrame {
         btn_moneyLayout.setVerticalGroup(
             btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_moneyLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(btn_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(img_money)
                     .addComponent(txt_money))
@@ -204,7 +207,7 @@ public class TravelRookie extends javax.swing.JFrame {
                 .addGroup(btn_placeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_place)
                     .addComponent(txt_place))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tab_beside.add(btn_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 230, 50));
@@ -357,8 +360,8 @@ public class TravelRookie extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btn_home;
-    private javax.swing.JPanel btn_money;
-    private javax.swing.JPanel btn_place;
+    public javax.swing.JPanel btn_money;
+    public javax.swing.JPanel btn_place;
     public javax.swing.JPanel btn_time_emp;
     private javax.swing.JLabel img_exit;
     private javax.swing.JLabel img_home;

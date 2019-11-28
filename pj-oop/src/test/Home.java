@@ -156,6 +156,9 @@ public class Home extends javax.swing.JInternalFrame {
         page_home.removeAll();
         place = choose_country.getSelectedItem().toString();
         Time t = new Time(this);
+        u.btn_place.setVisible(true);
+        u.btn_money.setVisible(true);
+        u.btn_time_emp.setVisible(true);
         u.setPlace(place);
         page_home.add(t).setVisible(true);
     }//GEN-LAST:event_Lets_goMouseClicked
