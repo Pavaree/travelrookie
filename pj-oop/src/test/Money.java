@@ -59,8 +59,6 @@ public class Money extends javax.swing.JInternalFrame {
         contry_us = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         page_money.setBackground(new java.awt.Color(0, 156, 134));
         page_money.setPreferredSize(new java.awt.Dimension(930, 630));
@@ -102,6 +100,11 @@ public class Money extends javax.swing.JInternalFrame {
                 money_usInputMethodTextChanged(evt);
             }
         });
+        money_us.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                money_usActionPerformed(evt);
+            }
+        });
 
         contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (Baht)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
         contry_us.addActionListener(new java.awt.event.ActionListener() {
@@ -115,12 +118,6 @@ public class Money extends javax.swing.JInternalFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("ค่าสกุลเงินที่เปลี่ยนแล้ว");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel3.setText("jLabel3");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout page_moneyLayout = new javax.swing.GroupLayout(page_money);
         page_money.setLayout(page_moneyLayout);
@@ -141,37 +138,33 @@ public class Money extends javax.swing.JInternalFrame {
                                 .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(61, 61, 61)
                         .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(money_us)
-                            .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
-                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)))
+                            .addComponent(money_us, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                            .addComponent(money_got)))
                     .addGroup(page_moneyLayout.createSequentialGroup()
                         .addGap(242, 242, 242)
                         .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         page_moneyLayout.setVerticalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(page_moneyLayout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
-                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3))
-                    .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1)))
+                .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(page_moneyLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(contry_us, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, page_moneyLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(money_us, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(83, 83, 83)
                 .addGroup(page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(money_got, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contry_need, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4))
-                .addContainerGap(247, Short.MAX_VALUE))
+                    .addComponent(jLabel2))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -182,7 +175,7 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
         );
 
         pack();
@@ -289,6 +282,10 @@ public class Money extends javax.swing.JInternalFrame {
     private void money_usInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_money_usInputMethodTextChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_money_usInputMethodTextChanged
+
+    private void money_usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_money_usActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_money_usActionPerformed
 
     public Money(JLabel Exchang_txt, JButton btn_exc, JComboBox<String> contry_need, JComboBox<String> contry_us, JTextField money_got, JTextField money_us, JPanel page_money) {
         this.Exchang_txt = Exchang_txt;
@@ -484,8 +481,6 @@ public class Money extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> contry_us;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField money_got;
     private javax.swing.JTextField money_us;
     private javax.swing.JPanel page_money;
