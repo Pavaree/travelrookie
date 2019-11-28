@@ -41,217 +41,217 @@ public class Place extends javax.swing.JInternalFrame {
         String path = "../place_image/australia/bondibeach.jpg";
 
         if (page.place.equals("Australia")) {
-            img1.setIcon(new ImageIcon("src\\aus\\12apostles.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\aus\\12apostles.jpg"));
             name1.setText("Apostles");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
             jTextField1.setText("เสาหินปูนที่ตั้งเรียงรายอย่างตระหง่านนอกขายฝั่งรัฐวิคตอเรียนี้จริงๆ "
                     + "นับได้เพียงเก้าต้น เท่านั้นแต่ว่าตั้งชื่อตามคริสต์ศาสนาว่ามีสิบสองต้นเพื่อวัตถุประสงค์ทางการท่องเที่ยว "
                     + " การกัดเซาะของ น้ำทะเลทำให้เสาต้นหนึ่งล้มไปแล้ว ส่วนที่เหลือก็คาดว่าจะประสบชะตากรรมเช่นเดียวกัน ลองเข้าไป "
                     + "ชมเสาเหล่านี้ได้จากถนนเกรท โอเชียน (Great Ocean Road) เขตเมืองเมลเบิร์น ซึ่งเป็นถนนขับรถ ชมวิวที่สวยที่สุดในทวีป ");
-            img2.setIcon(new ImageIcon("src\\aus\\bondibeach.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\aus\\bondibeach.jpg"));
             name2.setText("Bondibeach");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
             jTextField2.setText("ชายหาดบอนไดเป็นชายหาดที่เป็นเอกลักษณ์ที่มีชื่อเสียงมากที่สุดแห่งหนึ่งไม่เพียงแต่ใน ออสเตรเลียเท่านั้นแต่ทั่วโลก"
                     + "เป็นจุดพักผ่อนยอดนิยมในท้องถิ่นทั้งสำหรับการเล่นกระดานโต้คลื่น ว่ายน้ำและอาบแดด ชายหาดที่เป็นสวรรค์สำหรับการออกมาดูผู้คนทำกิจกรรมนี้ยังมีพื้นที่สวนสาธารณะด้านหลังที่มีนักเล่น "
                     + " โรลเลอร์เบลดและสเก็ตมาโชว์ทักษะการเล่นให้ได้ชมกันอีกด้วย ");
-            img3.setIcon(new ImageIcon("src\\aus\\sydneyopera.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\aus\\sydneyopera.jpg"));
             name3.setText("Sydneyopera");
             season3.setText("ช่วงเวลาที่เหมาะสม ช่วงคริสต์มาสถึงปีใหม่");
             jTextField3.setText("เป็นสัญลักษณ์ของออสเตรเลียที่รู้จักกันทั่วโลกอย่างไม่ต้องสงสัย คุณสามารถแค่ถ่ายรูปภาพอาคารทรง ใบเรือที่มีชื่อเสียง เข้าไปนั่งฟังโอเปร่า หรือชมดอกไม้ไฟจากเรือในท่าเรือซิดนีย์ตอนเที่ยงคืนในคืน ก่อนปีใหม่ก็ได้ ");
         } else if (page.place.equals("Canada")) {
-            img1.setIcon(new ImageIcon("src\\canada\\banff-national-park.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\canada\\banff-national-park.jpg"));
             name1.setText("Banff National Park");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
             jTextField1.setText("เป็นสถานที่ท่องเที่ยวยอด นิยมมากที่สุดแห่งหนึ่งของแคนาดา ด้วยที่นี่มีพื้นที่ส่วนหนึ่งอยู่ในแนวเทือกเขาร็อกกี เมาน์เทน และมี "
                     + " จุดชมวิวเทือกเขาร็อกกี เมาน์เทน ที่สวยที่สุดอีกด้วย ทะเลสาบก็ไม่น้อยหน้า มี ความงดงามติดอันดับต้น ๆ ของโลกเลยทีเดียว นั่นก็คือ Lake Louise มีลักษณะเป็นทะเลสาบสีฟ้า "
                     + " เขียวมรกตสวยใส รายล้อมไปด้วยเทือกเขาสีเขียวสูงใหญ่");
-            img2.setIcon(new ImageIcon("src\\canada\\niagara-falls.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\canada\\niagara-falls.jpg"));
             name2.setText("Niagara Falls");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
             jTextField2.setText("าเป็นหนึ่งในน้ำตกที่ยิ่งใหญ่ที่สุด ในโลก ตั้งอยู่ระหว่างชายแดนรัฐนิวยอร์ก ประเทศสหรัฐอเมริกา และรัฐออนตาริโอ ประเทศแคนาดา "
                     + " ซึ่งน้ำตกแห่งนี้จะประกอบด้วย 3 น้ำตกด้วยกัน คือน้ำตกเกือกม้า (Horseshoe Falls) อยู่ทางฝั่ง แคนาดา, น้ำตกอเมริกา (American Falls) อยู่ทางฝั่งสหรัฐอเมริกา "
                     + " และน้ำตก Bridal Veil อยู่ทางฝั่ง อเมริกาเช่นกัน");
-            img3.setIcon(new ImageIcon("src\\canada\\ottawa.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\canada\\ottawa.jpg"));
             name3.setText("Ottawa");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
             jTextField3.setText("เป็น เมืองหลวงที่มีเสน่ห์มากที่สุดแห่งหนึ่งของโลก ใครที่หลงใหลในสถาปัตยกรรมฟื้นฟูโกธิค (Gothic Revival architecture) จะต้องหลงรักเมืองแห่งนี้แน่นอน"
                     + " ที่นี่ไม่ค่อยมีตึกและอาคารสูง ๆ รูปแบบทันสมัยเยอะ มากนัก รอบ ๆ เมืองเราจะได้เห็นอาคารในรูปแบบสถาปัตยกรรมฟื้นฟูโกธิคเสียเป็นส่วนใหญ่");
         } else if (page.place.equals("China")) {
-            img1.setIcon(new ImageIcon("src\\china\\798 Art District_5.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\china\\798 Art District_5.jpg"));
             name1.setText("798 Art District");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
             jTextField1.setText("เป็นชุมชนศิลปินขนาดใหญ่ที่มีชื่อเสียงมากของจีน ตั้งอยู่ใจกลางกรุงปักกิ่ง\n" +
 "สมัยก่อนโรงงาน 798 แห่งนี้เคยเป็นที่ตั้งของโรงงานผลิตอุปกรณ์ไฟฟ้า และอิเล็กทรอนิกส์ ของทหาร\n" +
 "โดยจะเป็นชุมชนศิลปะ งานอาร์ต ร้านของแฮนเมดต่างๆ");
-            img2.setIcon(new ImageIcon("src\\china\\Great Wall of China_3.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\china\\Great Wall of China_3.jpg"));
             name2.setText("Great Wall of China");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูใบไม้ผลิ และฤดูหนาว");
             jTextField2.setText("เป็นสิ่งมหัศจรรย์ของโลกที่มนุษย์สร้างขึ้น โดยเป็นกำแพงที่มีความยาวถึง 21,196.18 กิโลเมตร อย่างที่เรียกกันว่า กําแพงหมื่นลี้ ครอบคลุมพื้นที่ 15 มณฑลทั่วประเทศจีน");
-            img3.setIcon(new ImageIcon("src\\china\\Olympic Stadium 2008_3.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\china\\Olympic Stadium 2008_3.jpg"));
             name3.setText("The Beijing National Stadium");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
             jTextField3.setText("โดยสนามแห่งนี้ได้ใช้ในมหกรรมกีฬาโอลิมปิกในปี 2008 พองานกีฬาได้สิ้นสุดลง\n"
                     + "ก็ได้เปิดเป็นสถานที่ท่องเที่ยวให้นักท่องเที่ยวเข้ามาชม ถือว่าถ้ามาปักกิ่งแล้วต้องห้ามพลาดค่ะ");
         } else if (page.place.equals("Croatia")) {
-            img1.setIcon(new ImageIcon("src\\croatia\\dubrovnikwalls.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\croatia\\dubrovnikwalls.jpg"));
             name1.setText("Dubrovnik Old Town");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
-            img2.setIcon(new ImageIcon("src\\croatia\\Plitvice_Lakes-National-Park.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\croatia\\Plitvice_Lakes-National-Park.jpg"));
             name2.setText("Plitvice National Park");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
-            img3.setIcon(new ImageIcon("src\\croatia\\hvartown.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\croatia\\hvartown.jpg"));
             name3.setText("Hvar Town");
             season3.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
         } else if (page.place.equals("Denmark")) {
-            img1.setIcon(new ImageIcon("src\\denmark\\mulafossur.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\denmark\\mulafossur.jpg"));
             name1.setText("Mulafossur Waterfall");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
-            img2.setIcon(new ImageIcon("src\\denmark\\Torshavn.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\denmark\\Torshavn.jpg"));
             name2.setText("Torshavn");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\denmark\\cityhallsquare.jpeg"));
+            img3.setIcon(new ImageIcon("src\\pic\\denmark\\cityhallsquare.jpeg"));
             name3.setText("City Hall Square");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Hungary")) {
-            img1.setIcon(new ImageIcon("src\\hungary\\budacastle.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\hungary\\budacastle.jpg"));
             name1.setText("Buda Castle");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล แต่จะให้ดีที่สุดคือ ฤดูร้อน");
-            img2.setIcon(new ImageIcon("src\\hungary\\Szechenyi-Baths.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\hungary\\Szechenyi-Baths.jpg"));
             name2.setText("Széchenyi Thermal Bath");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\hungary\\gellerthill.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\hungary\\gellerthill.jpg"));
             name3.setText("Gellert Hill");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Iceland")) {
-            img1.setIcon(new ImageIcon("src\\iceland\\bluelagoon.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\iceland\\bluelagoon.jpg"));
             name1.setText("Blue Lagoon");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
-            img2.setIcon(new ImageIcon("src\\iceland\\hallgrimskirkja.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\iceland\\hallgrimskirkja.jpg"));
             name2.setText("Hallgrimskirkja");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\iceland\\gullfoss.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\iceland\\gullfoss.jpg"));
             name3.setText("Gullfoss");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Indonesia")) {
-            img1.setIcon(new ImageIcon("src\\indonesia\\Bali.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\indonesia\\Bali.jpg"));
             name1.setText("Bali");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\indonesia\\borobudur.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\indonesia\\borobudur.jpg"));
             name2.setText("Borobudur");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\indonesia\\bunaken.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\indonesia\\bunaken.jpg"));
             name3.setText("Bunaken");
             season3.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
         } else if (page.place.equals("Japan")) {
-            img1.setIcon(new ImageIcon("src\\japan\\fuji.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\japan\\fuji.jpg"));
             name1.setText("Fuji");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว ฤดุใบไม้ผลิ ฤดูใบไม้ร่วง");
-            img2.setIcon(new ImageIcon("src\\japan\\hokkaido.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\japan\\hokkaido.jpg"));
             name2.setText("Hokkaido");
             season2.setText("ช่วงเวลาที่เหมาะสม ช่วงกลางปีจนถึงฤดูร้อน");
-            img3.setIcon(new ImageIcon("src\\japan\\Shirakawa-go.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\japan\\Shirakawa-go.jpg"));
             name3.setText("Shirakawa-go");
             season3.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
         } else if (page.place.equals("Thailand")) {
-            img1.setIcon(new ImageIcon("src\\thailand\\Tarutao-National-Park-.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\thailand\\Tarutao-National-Park-.jpg"));
             name1.setText("Tarutao National Park");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
-            img2.setIcon(new ImageIcon("src\\thailand\\Intanon.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\thailand\\Intanon.jpg"));
             name2.setText("Intanon");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
-            img3.setIcon(new ImageIcon("src\\thailand\\amphawa.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\thailand\\amphawa.jpg"));
             name3.setText("Amphawa Floating Market");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Switzerland")) {
-            img1.setIcon(new ImageIcon("src\\Switzerland\\Zytgloggeturm_2.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\Switzerland\\Zytgloggeturm_2.jpg"));
             name1.setText("Zytgloggeturm");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\Switzerland\\Munster_4.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\Switzerland\\Munster_4.jpg"));
             name2.setText("Munster");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\Switzerland\\Nydeggbrücke_2.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\Switzerland\\Nydeggbrücke_2.jpg"));
             name3.setText("Nydeggbrücke");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Singapore")) {
-            img1.setIcon(new ImageIcon("src\\Singapore\\Sea Aquarium_1.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\Singapore\\Sea Aquarium_1.jpg"));
             name1.setText("Sea Aquarium");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\Singapore\\Gardens by the Bay_2.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\Singapore\\Gardens by the Bay_2.jpg"));
             name2.setText("Gardens by the Bay");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\Singapore\\Universal Studios Singapore_2.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\Singapore\\Universal Studios Singapore_2.jpg"));
             name3.setText("Universal Studios Singapore");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Turkey")) {
-            img1.setIcon(new ImageIcon("src\\Turkey\\Pamukkale_2.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\Turkey\\Pamukkale_2.jpg"));
             name1.setText("Pamukkale");
             season1.setText("ช่วงเวลาที่เหมาะสม ฤดูร้อน");
-            img2.setIcon(new ImageIcon("src\\Turkey\\Ephesus_3.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\Turkey\\Ephesus_3.jpg"));
             name2.setText("Ephesus");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\Turkey\\Istanbul_3.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\Turkey\\Istanbul_3.jpg"));
             name3.setText("Istanbul");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
         } else if (page.place.equals("Norway")) {
-            img1.setIcon(new ImageIcon("src\\Norway\\Oslo_2.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\Norway\\Oslo_2.jpg"));
             name1.setText("Oslo");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\Norway\\Tromso_2.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\Norway\\Tromso_2.jpg"));
             name2.setText("Tromso");
             season2.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
-            img3.setIcon(new ImageIcon("src\\Norway\\Lofoten_3.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\Norway\\Lofoten_3.jpg"));
             name3.setText("Lofoten");
             season3.setText("ช่วงเวลาที่เหมาะสม ฤดูหนาว");
         } else if (page.place.equals("South Africa")) {
-            img1.setIcon(new ImageIcon("src\\South Africa\\Bo Kaap_1.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\South Africa\\Bo Kaap_1.jpg"));
             name1.setText("Bo Kaap");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\South Africa\\moro gelato_1.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\South Africa\\moro gelato_1.jpg"));
             name2.setText("MORO GELATO");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\South Africa\\V & A Waterfront_3.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\South Africa\\V & A Waterfront_3.jpg"));
             name3.setText("V & A Waterfront");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุถกช่วงฤดูกาล");
         } else if (page.place.equals("United States")) {
-            img1.setIcon(new ImageIcon("src\\US\\United States Capitol_3.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\US\\United States Capitol_3.jpg"));
             name1.setText("United States Capitol");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\US\\Lincoln Memorial_1.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\US\\Lincoln Memorial_1.jpg"));
             name2.setText("Lincoln Memorial");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\US\\Smithsonian Institution_2.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\US\\Smithsonian Institution_2.jpg"));
             name3.setText("Smithsonian Institution");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุถกช่วงฤดูกาล");
         } else if (page.place.equals("Mexico")) {
-            img1.setIcon(new ImageIcon("src\\Mexico\\Polanco_1.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\Mexico\\Polanco_1.jpg"));
             name1.setText("Polanco");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\Mexico\\Casa Azul – Frida House_2.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\Mexico\\Casa Azul – Frida House_2.jpg"));
             name2.setText("Casa Azul");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\Mexico\\the national museum of anthropology_3.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\Mexico\\the national museum of anthropology_3.jpg"));
             name3.setText("The National Museum of Anthropology");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุถกช่วงฤดูกาล");
         }
          else if (page.place.equals("England")) {
-            img1.setIcon(new ImageIcon("src\\England\\Tower of London_3.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\England\\Tower of London_3.jpg"));
             name1.setText("Tower of London");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\England\\Casa Azul – Frida House_2.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\England\\Casa Azul – Frida House_2.jpg"));
             name2.setText("Stonehenge");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\England\\British Museum_5.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\England\\British Museum_5.jpg"));
             name3.setText("British Museum");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุถกช่วงฤดูกาล");
         }
          else if (page.place.equals("Korea")) {
-            img1.setIcon(new ImageIcon("src\\South Korea\\Bukchon Hanok Village_3.jpg"));
+            img1.setIcon(new ImageIcon("src\\pic\\South Korea\\Bukchon Hanok Village_3.jpg"));
             name1.setText("Bukchon Hanok Village");
             season1.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img2.setIcon(new ImageIcon("src\\South Korea\\N Seoul Tower_2.jpg"));
+            img2.setIcon(new ImageIcon("src\\pic\\South Korea\\N Seoul Tower_2.jpg"));
             name2.setText("N Seoul Tower");
             season2.setText("ช่วงเวลาที่เหมาะสม ทุกช่วงฤดูกาล");
-            img3.setIcon(new ImageIcon("src\\South Korea\\Cheonggye Plaza_3.jpg"));
+            img3.setIcon(new ImageIcon("src\\pic\\South Korea\\Cheonggye Plaza_3.jpg"));
             name3.setText("Cheonggye Plaza");
             season3.setText("ช่วงเวลาที่เหมาะสม ทุถกช่วงฤดูกาล");
         }
