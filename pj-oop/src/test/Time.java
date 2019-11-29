@@ -284,45 +284,45 @@ public class Time extends javax.swing.JInternalFrame {
         } else {
 
             //not from Home class
-            if (main.place.equals("Australia")) {
+            if (placeSelect.equals("Australia")) {
                 place = "?city=Canberra";
-            } else if (main.place.equals("Canada")) {
+            } else if (placeSelect.equals("Canada")) {
                 place = "?city=Ottawa";
-            } else if (main.place.equals("China")) {
+            } else if (placeSelect.equals("China")) {
                 place = "?city=Beijing";
-            } else if (main.place.equals("Croatia")) {
+            } else if (placeSelect.equals("Croatia")) {
                 place = "?city=Zagreb";
-            } else if (main.place.equals("Denmark")) {
+            } else if (placeSelect.equals("Denmark")) {
                 place = "?city=Copenhagen";
-            } else if (main.place.equals("Hungary")) {
+            } else if (placeSelect.equals("Hungary")) {
                 place = "?city=Budapest";
-            } else if (main.place.equals("Iceland")) {
+            } else if (placeSelect.equals("Iceland")) {
                 place = "?city=Reykjavik";
-            } else if (main.place.equals("Indonesia")) {
+            } else if (placeSelect.equals("Indonesia")) {
                 place = "?city=Jakarta";
-            } else if (main.place.equals("Japan")) {
+            } else if (placeSelect.equals("Japan")) {
                 place = "?city=Tokyo";
-            } else if (main.place.equals("Korea")) {
+            } else if (placeSelect.equals("Korea")) {
                 place = "?city=South Korea";
-            } else if (main.place.equals("Mexico")) {
+            } else if (placeSelect.equals("Mexico")) {
                 place = "?city=Mexico";
-            } else if (main.place.equals("Norway")) {
+            } else if (placeSelect.equals("Norway")) {
                 place = "?city=Oslo";
-            } else if (main.place.equals("Singapore")) {
+            } else if (placeSelect.equals("Singapore")) {
                 place = "?city=Singapore";
-            } else if (main.place.equals("South Africa")) {
+            } else if (placeSelect.equals("South Africa")) {
                 place = "?city=Cape Town";
-            } else if (main.place.equals("Sweden")) {
+            } else if (placeSelect.equals("Sweden")) {
                 place = "?city=Stockholm";
-            } else if (main.place.equals("Switzerland")) {
+            } else if (placeSelect.equals("Switzerland")) {
                 place = "?city=Bern";
-            } else if (main.place.equals("Thailand")) {
+            } else if (placeSelect.equals("Thailand")) {
                 place = "?city=Bangkok";
-            } else if (main.place.equals("Turkey")) {
+            } else if (placeSelect.equals("Turkey")) {
                 place = "?city=Ankara";
-            } else if (main.place.equals("United Kingdom")) {
+            } else if (placeSelect.equals("United Kingdom")) {
                 place = "?city=London";
-            } else if (main.place.equals("United States")) {
+            } else if (placeSelect.equals("United States")) {
                 place = "?city=Washington";
             } 
         }

@@ -303,13 +303,13 @@ public class Money extends javax.swing.JInternalFrame {
             String url = "";
             if (first.equals("Australia (AUD)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=AUD";
-            } else if (first.equals("Canada")) {
+            } else if (first.equals("Canada (CAD)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CAD";
-            } else if (first.equals("China")) {
+            } else if (first.equals("China (CNY)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CNY";
-            } else if (first.equals("Croatia")) {
+            } else if (first.equals("Croatia (HRK)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=HRK";
-            } else if (first.equals("Denmark")) {
+            } else if (first.equals("Denmark (DKK)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=DKK";
             } else if (first.equals("Thailand (THB)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=THB";
@@ -420,18 +420,46 @@ public class Money extends javax.swing.JInternalFrame {
             String first = contry_us.getSelectedItem().toString();
             String second = contry_need.getSelectedItem().toString();
             String url = "";
-            if (second.equals("Australia")) {
+           if (second.equals("Australia (AUD)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=AUD";
-            } else if (second.equals("Canada")) {
+            } else if (second.equals("Canada (CAD)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CAD";
-            } else if (second.equals("China")) {
+            } else if (second.equals("China (CNY)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=CNY";
-            } else if (second.equals("Croatia")) {
+            } else if (second.equals("Croatia (HRK)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=HRK";
-            } else if (second.equals("Denmark")) {
+            } else if (second.equals("Denmark (DKK)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=DKK";
-            } else if (second.equals("Thailand")) {
+            } else if (second.equals("Thailand (THB)")) {
                 url = "https://api.exchangeratesapi.io/latest?base=THB";
+            } else if (second.equals("Hungary (HUF)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=HUF";
+            } else if (second.equals("Iceland (ISK)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=ISK";
+            } else if (second.equals("Indonesia (IDR)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=IDR";
+            } else if (second.equals("Japan (JPY)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=JPY";
+            } else if (second.equals("Korea (Won)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=KRW";
+            } else if (second.equals("Mexico (MXN)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=MXN";
+            } else if (second.equals("Norway (NOK)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=NOK";
+            } else if (second.equals("Singapore (SGD)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=SGD";
+            } else if (second.equals("South Africa (ZAR)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=ZAR";
+            } else if (second.equals("Sweden (SEK)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=SEK";
+            } else if (second.equals("Switzerland (CHF)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=CHF";
+            } else if (second.equals("Turkey (TRY)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=TRY";
+            } else if (second.equals("United Kingdom (GBP)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=GBP";
+            } else if (second.equals("United States (USD)")) {
+                url = "https://api.exchangeratesapi.io/latest?base=USD";
             }
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -458,16 +486,46 @@ public class Money extends javax.swing.JInternalFrame {
             JSONObject rates = new JSONObject(myResponse.getJSONObject("rates").toString());
             System.out.println(rates);
 
-            if (first.equals("Australia")) {
+            if (first.equals("Australia (AUD)")) {
                 money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("AUD") + "");
-            } else if (first.equals("Canada")) {
+            } else if (first.equals("Canada (CAD)")) {
                 money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CAD") + "");
-            } else if (first.equals("China")) {
+            } else if (first.equals("China (CNY)")) {
                 money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CNY") + "");
-            } else if (first.equals("Croatia")) {
+            } else if (first.equals("Croatia (HRK)")) {
                 money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("HRK") + "");
-            } else if (first.equals("Denmark")) {
+            } else if (first.equals("Denmark (DKK)")) {
                 money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("DKK") + "");
+            } else if (first.equals("Thailand (THB)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("THB") + "");
+            } else if (first.equals("Hungary (HUF)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("HUF") + "");
+            } else if (first.equals("Iceland (ISK)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("ISK") + "");
+            } else if (first.equals("Indonesia (IDR)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("IDR") + "");
+            } else if (first.equals("Japan (JPY)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("JPY") + "");
+            } else if (first.equals("Korea (Won)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("KRW") + "");
+            } else if (first.equals("Mexico (MXN)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("MXN") + "");
+            }else if (first.equals("Norway (NOK)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("NOK") + "");
+            } else if (first.equals("Singapore (SGD)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("SGD") + "");
+            } else if (first.equals("South Africa (ZAR)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("ZAR") + "");
+            } else if (first.equals("Sweden (SEK)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("SEK") + "");
+            } else if (first.equals("Switzerland (CHF)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CHF") + "");
+            } else if (first.equals("Turkey (TRY)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("TRY") + "");
+            }else if (first.equals("United Kingdom (GBP)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("GBP") + "");
+            } else if (first.equals("United States (USD)")) {
+                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("USD") + "");
             }
 
         } catch (IOException ex) {
