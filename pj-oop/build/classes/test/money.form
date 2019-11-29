@@ -24,7 +24,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="page_money" alignment="0" pref="674" max="32767" attributes="0"/>
+          <Component id="page_money" alignment="0" pref="678" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -69,7 +69,7 @@
                           <Component id="Exchang_txt" min="-2" pref="443" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="174" max="32767" attributes="0"/>
+                  <EmptySpace pref="117" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -143,7 +143,7 @@
                 <StringItem index="13" value="South Africa (ZAR)"/>
                 <StringItem index="14" value="Sweden (SEK)"/>
                 <StringItem index="15" value="Switzerland (CHF)"/>
-                <StringItem index="16" value="Thailand (Baht)"/>
+                <StringItem index="16" value="Thailand (THB)"/>
                 <StringItem index="17" value="Turkey (TRY)"/>
                 <StringItem index="18" value="United Kingdom (GBP)"/>
                 <StringItem index="19" value="United States (USD)"/>
@@ -188,7 +188,7 @@
                 <StringItem index="13" value="South Africa (ZAR)"/>
                 <StringItem index="14" value="Sweden (SEK)"/>
                 <StringItem index="15" value="Switzerland (CHF)"/>
-                <StringItem index="16" value="Thailand (Baht)"/>
+                <StringItem index="16" value="Thailand (THB)"/>
                 <StringItem index="17" value="Turkey (TRY)"/>
                 <StringItem index="18" value="United Kingdom (GBP)"/>
                 <StringItem index="19" value="United States (USD)"/>

@@ -77,7 +77,7 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
-        contry_need.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (Baht)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
+        contry_need.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (THB)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
         contry_need.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contry_needActionPerformed(evt);
@@ -106,7 +106,7 @@ public class Money extends javax.swing.JInternalFrame {
             }
         });
 
-        contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (Baht)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
+        contry_us.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Australia (AUD)", "Canada (CAD)", "China (CNY)", "Croatia (HRK)", "Denmark (DKK)", "Hungary (HUF)", "Iceland (ISK)", "Indonesia (IDR)", "Japan (JPY)", "Korea (KRW)", "Mexico (MXN)", "Norway (NOK)", "Singapore (SGD)", "South Africa (ZAR)", "Sweden (SEK)", "Switzerland (CHF)", "Thailand (THB)", "Turkey (TRY)", "United Kingdom (GBP)", "United States (USD)" }));
         contry_us.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contry_usActionPerformed(evt);
@@ -143,7 +143,7 @@ public class Money extends javax.swing.JInternalFrame {
                     .addGroup(page_moneyLayout.createSequentialGroup()
                         .addGap(242, 242, 242)
                         .addComponent(Exchang_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         page_moneyLayout.setVerticalGroup(
             page_moneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +175,7 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
 
         pack();
@@ -369,45 +369,65 @@ public class Money extends javax.swing.JInternalFrame {
             System.out.println(rates);
 
             if (second.equals("Australia (AUD)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("AUD") + "");
+                int aud = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("AUD"));
+                money_got.setText(aud + "");
             } else if (second.equals("Canada (CAD)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CAD") + "");
+                int cad = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("CAD"));
+                money_got.setText(cad + "");
             } else if (second.equals("China (CNY)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CNY") + "");
+                int cny = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("CNY"));
+                money_got.setText(cny + "");
             } else if (second.equals("Croatia (HRK)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HRK") + "");
+                int hrk = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("HRK"));
+                money_got.setText(hrk + "");
             } else if (second.equals("Denmark (DKK)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("DKK") + "");
+                int dkk = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("DKK"));
+                money_got.setText(dkk + "");
             } else if (second.equals("Thailand (THB)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("THB") + "");
+                int thb = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("THB"));
+                money_got.setText(thb + "");
             } else if (second.equals("Hungary (HUF)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("HUF") + "");
+                int huf = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("HUF"));
+                money_got.setText(huf + "");
             } else if (second.equals("Iceland (ISK)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("ISK") + "");
+                int isk = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("ISK"));
+                money_got.setText(isk + "");
             } else if (second.equals("Indonesia (IDR)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("IDR") + "");
+                int idr = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("IDR"));
+                money_got.setText(idr + "");
             } else if (second.equals("Japan (JPY)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("JPY") + "");
+                int jpy = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("JPY"));
+                money_got.setText(jpy + "");
             } else if (second.equals("Korea (Won)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("KRW") + "");
+                int krw = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("KRW"));
+                money_got.setText(krw + "");
             } else if (second.equals("Mexico (MXN)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("MXN") + "");
+                int mxn = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("MXN"));
+                money_got.setText(mxn + "");
             }else if (second.equals("Norway (NOK)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("NOK") + "");
+                int nok = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("NOK"));
+                money_got.setText(nok + "");
             } else if (second.equals("Singapore (SGD)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("SGD") + "");
+                int sgd = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("SGD"));
+                money_got.setText(sgd + "");
             } else if (second.equals("South Africa (ZAR)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("ZAR") + "");
+                int zar = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("ZAR"));
+                money_got.setText(zar + "");
             } else if (second.equals("Sweden (SEK)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("SEK") + "");
+                int sek = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("SEK"));
+                money_got.setText(sek + "");
             } else if (second.equals("Switzerland (CHF)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("CHF") + "");
+                int chf = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("CHF"));
+                money_got.setText(chf + "");
             } else if (second.equals("Turkey (TRY)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("TRY") + "");
+                int t_ry = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("TRY"));
+                money_got.setText(t_ry + "");
             }else if (second.equals("United Kingdom (GBP)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("GBP") + "");
+                int gbp = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("GBP"));
+                money_got.setText(gbp + "");
             } else if (second.equals("United States (USD)")) {
-                money_got.setText(Double.parseDouble(money_us.getText()) * rates.getDouble("USD") + "");
+                int usd = (int) (Double.parseDouble(money_us.getText()) * rates.getDouble("USD"));
+                money_got.setText(usd + "");
             }
 
         } catch (IOException ex) {
@@ -487,46 +507,67 @@ public class Money extends javax.swing.JInternalFrame {
             System.out.println(rates);
 
             if (first.equals("Australia (AUD)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("AUD") + "");
+                int aud = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("AUD"));
+                money_us.setText(aud + "");
             } else if (first.equals("Canada (CAD)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CAD") + "");
+                int cad = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("CAD"));
+                money_us.setText(cad + "");
             } else if (first.equals("China (CNY)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CNY") + "");
+                int cny = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("CNY"));
+                money_us.setText(cny + "");
             } else if (first.equals("Croatia (HRK)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("HRK") + "");
+                int hrk = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("HRK"));
+                money_us.setText(hrk + "");
             } else if (first.equals("Denmark (DKK)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("DKK") + "");
+                int dkk = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("DKK"));
+                money_us.setText(dkk + "");
             } else if (first.equals("Thailand (THB)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("THB") + "");
+                int thb = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("THB"));
+                money_us.setText(thb + "");
             } else if (first.equals("Hungary (HUF)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("HUF") + "");
+                int huf = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("HUF"));
+                money_us.setText(huf + "");
             } else if (first.equals("Iceland (ISK)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("ISK") + "");
+                int isk = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("ISK"));
+                money_us.setText(isk + "");
             } else if (first.equals("Indonesia (IDR)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("IDR") + "");
+                int idr = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("IDR"));
+                money_us.setText(idr + "");
             } else if (first.equals("Japan (JPY)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("JPY") + "");
+                int jpy = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("JPY"));
+                money_us.setText(jpy + "");
             } else if (first.equals("Korea (Won)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("KRW") + "");
+                int krw = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("KRW"));
+                money_us.setText(krw + "");
             } else if (first.equals("Mexico (MXN)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("MXN") + "");
+                int mxn = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("MXN"));
+                money_us.setText(mxn + "");
             }else if (first.equals("Norway (NOK)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("NOK") + "");
+                int nok = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("NOK"));
+                money_us.setText(nok + "");
             } else if (first.equals("Singapore (SGD)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("SGD") + "");
+                int sgd = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("SGD"));
+                money_us.setText(sgd + "");
             } else if (first.equals("South Africa (ZAR)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("ZAR") + "");
+                int zar = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("ZAR"));
+                money_us.setText(zar + "");
             } else if (first.equals("Sweden (SEK)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("SEK") + "");
+                int sek = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("SEK"));
+                money_us.setText(sek + "");
             } else if (first.equals("Switzerland (CHF)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("CHF") + "");
+                int chf = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("CHF"));
+                money_us.setText(chf + "");
             } else if (first.equals("Turkey (TRY)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("TRY") + "");
+                int t_ry = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("TRY"));
+                money_us.setText(t_ry + "");
             }else if (first.equals("United Kingdom (GBP)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("GBP") + "");
+                int gbp = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("GBP"));
+                money_us.setText(gbp + "");
             } else if (first.equals("United States (USD)")) {
-                money_us.setText(Double.parseDouble(money_got.getText()) * rates.getDouble("USD") + "");
+                int usd = (int) (Double.parseDouble(money_got.getText()) * rates.getDouble("USD"));
+                money_us.setText(usd + "");
             }
+            
 
         } catch (IOException ex) {
             Logger.getLogger(Money.class
