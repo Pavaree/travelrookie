@@ -98,6 +98,12 @@ public class Time extends javax.swing.JInternalFrame {
         tell_weather = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Sunset = new javax.swing.JLabel();
+        UV1 = new javax.swing.JLabel();
+        Sunrise = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(221, 119, 119));
         setMinimumSize(new java.awt.Dimension(640, 640));
@@ -115,33 +121,32 @@ public class Time extends javax.swing.JInternalFrame {
             }
         });
         Time_and_temp.add(time_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 180, 87));
-        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 122, 110));
+        Time_and_temp.add(imgtemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 122, 110));
 
         Temparature.setBackground(new java.awt.Color(0, 156, 134));
-        Temparature.setFont(new java.awt.Font("Consolas", 0, 50)); // NOI18N
-        Temparature.setForeground(new java.awt.Color(255, 255, 255));
-        Temparature.setText("Temparature");
-        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 300, 87));
+        Temparature.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
+        Temparature.setText("Temparature :");
+        Time_and_temp.add(Temparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 360, 87));
 
         date.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
-        date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText(" Date :");
         Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 150, -1));
 
         time_them.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
-        time_them.setForeground(new java.awt.Color(255, 255, 255));
+        time_them.setForeground(new java.awt.Color(255, 255, 204));
         time_them.setText("--:--:--");
         Time_and_temp.add(time_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, 170, 87));
 
-        temp.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
+        temp.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
         temp.setForeground(new java.awt.Color(255, 255, 255));
         temp.setText("Temp");
-        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 120, -1));
+        Time_and_temp.add(temp, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 160, 50));
 
+        city.setBackground(new java.awt.Color(0, 0, 0));
         city.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
-        city.setForeground(new java.awt.Color(255, 255, 255));
+        city.setForeground(new java.awt.Color(255, 255, 51));
         city.setText(" City");
-        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 260, -1));
+        Time_and_temp.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 300, -1));
 
         d_or_n_us.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         d_or_n_us.setForeground(new java.awt.Color(255, 255, 255));
@@ -149,19 +154,18 @@ public class Time extends javax.swing.JInternalFrame {
         Time_and_temp.add(d_or_n_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 550, 220, -1));
 
         d_or_n_them.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
-        d_or_n_them.setForeground(new java.awt.Color(255, 255, 255));
+        d_or_n_them.setForeground(new java.awt.Color(255, 255, 204));
         d_or_n_them.setText("dorn");
         Time_and_temp.add(d_or_n_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 200, -1));
 
         time1.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
-        time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setText("Time :");
         Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 140, -1));
 
         tell_weather.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         tell_weather.setForeground(new java.awt.Color(255, 255, 255));
         tell_weather.setText(" tell_temp");
-        Time_and_temp.add(tell_weather, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 240, 80));
+        Time_and_temp.add(tell_weather, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 220, 240, 80));
 
         jLabel2.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,7 +175,34 @@ public class Time extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 153));
         jLabel1.setText("jLabel1");
-        Time_and_temp.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 150, 30));
+        Time_and_temp.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 280, 30));
+
+        Sunset.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        Sunset.setForeground(new java.awt.Color(255, 255, 255));
+        Sunset.setText("set");
+        Time_and_temp.add(Sunset, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 500, -1));
+
+        UV1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        UV1.setForeground(new java.awt.Color(255, 255, 255));
+        UV1.setText("UV");
+        Time_and_temp.add(UV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 330, -1));
+
+        Sunrise.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        Sunrise.setForeground(new java.awt.Color(255, 255, 255));
+        Sunrise.setText("aqi");
+        Time_and_temp.add(Sunrise, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 330, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel3.setText("Timezone : ");
+        Time_and_temp.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel4.setText("Ultraviolet : ");
+        Time_and_temp.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel5.setText("Air Quality Index :");
+        Time_and_temp.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,7 +212,7 @@ public class Time extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
+            .addComponent(Time_and_temp, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
 
         pack();
@@ -193,8 +224,11 @@ public class Time extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Sunrise;
+    private javax.swing.JLabel Sunset;
     private javax.swing.JLabel Temparature;
     private javax.swing.JPanel Time_and_temp;
+    private javax.swing.JLabel UV1;
     private javax.swing.JLabel city;
     private javax.swing.JLabel d_or_n_them;
     private javax.swing.JLabel d_or_n_us;
@@ -202,6 +236,9 @@ public class Time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel imgtemp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel tell_weather;
     private javax.swing.JLabel temp;
     private javax.swing.JLabel time1;
@@ -358,6 +395,9 @@ public class Time extends javax.swing.JInternalFrame {
         JSONObject object_data = new JSONObject(array_data.getJSONObject(0).toString());
         //System.out.println(object_data.getInt("temp"));
         temp.setText(object_data.getInt("temp") + " °C");
+        UV1.setText(""+object_data.getDouble("uv"));
+        Sunrise.setText("" + object_data.getInt("aqi"));
+        Sunset.setText("" + object_data.getString("timezone"));
         //System.out.println(object_data.getString("city_name"));
         city.setText(object_data.getString("city_name"));
         jLabel1.setText(main.place);
