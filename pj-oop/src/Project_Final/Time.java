@@ -101,9 +101,9 @@ public class Time extends javax.swing.JInternalFrame {
         Sunset = new javax.swing.JLabel();
         UV1 = new javax.swing.JLabel();
         Sunrise = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        time_zone = new javax.swing.JLabel();
+        U_V = new javax.swing.JLabel();
+        aqi_ = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(221, 119, 119));
         setMinimumSize(new java.awt.Dimension(640, 640));
@@ -130,7 +130,7 @@ public class Time extends javax.swing.JInternalFrame {
 
         date.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         date.setText(" Date :");
-        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 150, -1));
+        Time_and_temp.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 150, -1));
 
         time_them.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         time_them.setForeground(new java.awt.Color(255, 255, 204));
@@ -160,7 +160,7 @@ public class Time extends javax.swing.JInternalFrame {
 
         time1.setFont(new java.awt.Font("Consolas", 0, 36)); // NOI18N
         time1.setText("Time :");
-        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 140, -1));
+        Time_and_temp.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 140, -1));
 
         tell_weather.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         tell_weather.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,17 +192,17 @@ public class Time extends javax.swing.JInternalFrame {
         Sunrise.setText("aqi");
         Time_and_temp.add(Sunrise, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 330, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel3.setText("Timezone : ");
-        Time_and_temp.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
+        time_zone.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        time_zone.setText("Timezone : ");
+        Time_and_temp.add(time_zone, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel4.setText("Ultraviolet : ");
-        Time_and_temp.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
+        U_V.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        U_V.setText("Ultraviolet : ");
+        Time_and_temp.add(U_V, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel5.setText("Air Quality Index :");
-        Time_and_temp.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+        aqi_.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        aqi_.setText("Air Quality Index :");
+        Time_and_temp.add(aqi_, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -229,6 +229,8 @@ public class Time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel Temparature;
     private javax.swing.JPanel Time_and_temp;
     private javax.swing.JLabel UV1;
+    private javax.swing.JLabel U_V;
+    private javax.swing.JLabel aqi_;
     private javax.swing.JLabel city;
     private javax.swing.JLabel d_or_n_them;
     private javax.swing.JLabel d_or_n_us;
@@ -236,14 +238,12 @@ public class Time extends javax.swing.JInternalFrame {
     private javax.swing.JLabel imgtemp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel tell_weather;
     private javax.swing.JLabel temp;
     private javax.swing.JLabel time1;
     private javax.swing.JLabel time_them;
     private javax.swing.JLabel time_us;
+    private javax.swing.JLabel time_zone;
     // End of variables declaration//GEN-END:variables
 
     public void clock() {
