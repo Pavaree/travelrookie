@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -221,7 +221,7 @@ public class Time extends javax.swing.JInternalFrame {
                         int hourThemFormat = hour - 7 + hourThem;
                         if (hourThemFormat >= 24) {
                             hourThemFormat -= 24;
-                        }else if(hourThemFormat < 0){
+                        } else if (hourThemFormat < 0) {
                             hourThemFormat += 24;
                         }
                         time_them.setText(String.format("%02d:%02d:%02d", hourThemFormat, min, sec));
@@ -283,7 +283,7 @@ public class Time extends javax.swing.JInternalFrame {
                 place = "?city=London";
             } else if (main.place.equals("United States")) {
                 place = "?city=Washington";
-            } 
+            }
 
         } else {
 
@@ -328,7 +328,7 @@ public class Time extends javax.swing.JInternalFrame {
                 place = "?city=London";
             } else if (placeSelect.equals("United States")) {
                 place = "?city=Washington";
-            } 
+            }
         }
         URL obj = new URL(url + place + key);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -361,37 +361,35 @@ public class Time extends javax.swing.JInternalFrame {
         city.setText(object_data.getString("city_name"));
         jLabel1.setText(main.place);
         //System.out.println(object_data.getString("app_temp"));
-        
-        
+
         JSONObject weather_data = new JSONObject(object_data.getJSONObject("weather").toString());
         String code = weather_data.getString("description");
-        if(code.equals("Thunderstorm with light rain")|| code.equals("Thunderstorm with rain")||
-            code.equals("Thunderstorm with heavy rain")|| code.equals("Thunderstorm with light drizzle")||code.equals("Thunderstorm with drizzle")
-            || code.equals("Thunderstorm with heavy drizzle")||code.equals("Thunderstorm with Hail")){
+        if (code.equals("Thunderstorm with light rain") || code.equals("Thunderstorm with rain")
+                || code.equals("Thunderstorm with heavy rain") || code.equals("Thunderstorm with light drizzle") || code.equals("Thunderstorm with drizzle")
+                || code.equals("Thunderstorm with heavy drizzle") || code.equals("Thunderstorm with Hail")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Thunders.png"));
-        }else if(code.equals("Light drizzle")|| code.equals("Drizzle")||
-            code.equals("Heavy drizzle")|| code.equals("Light rain")||code.equals("Moderate rain")||code.equals("Flurries")
-            || code.equals("Heavy rain")||code.equals("Freezing rain")|| code.equals("Light shower rain")
-            ||code.equals("Shower rain")||code.equals("Heavy shower rain")){
+        } else if (code.equals("Light drizzle") || code.equals("Drizzle")
+                || code.equals("Heavy drizzle") || code.equals("Light rain") || code.equals("Moderate rain") || code.equals("Flurries")
+                || code.equals("Heavy rain") || code.equals("Freezing rain") || code.equals("Light shower rain")
+                || code.equals("Shower rain") || code.equals("Heavy shower rain")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Rain.png"));
-        }else if(code.equals("Light snow")|| code.equals("Snow")||code.equals("Snow shower")|| code.equals("Heavy snow shower")){
+        } else if (code.equals("Light snow") || code.equals("Snow") || code.equals("Snow shower") || code.equals("Heavy snow shower")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\snow.png"));
-        }else if(code.equals("Heavy Snow")|| code.equals("Mix snow/rain")){
+        } else if (code.equals("Heavy Snow") || code.equals("Mix snow/rain")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\snow_storm.png"));
-        }else if(code.equals("Sleet")|| code.equals("Heavy sleet")){
+        } else if (code.equals("Sleet") || code.equals("Heavy sleet")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\sleet.png"));
-        }else if(code.equals("Mist")|| code.equals("Smoke")||code.equals("Haze")|| code.equals("Sand/dust")||code.equals("Fog")|| code.equals("Freezing fog")){
+        } else if (code.equals("Mist") || code.equals("Smoke") || code.equals("Haze") || code.equals("Sand/dust") || code.equals("Fog") || code.equals("Freezing fog")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\haze.png"));
-        }else if(code.equals("Clear sky")){
+        } else if (code.equals("Clear sky")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\moon_and_sunx.png"));
-        }else if(code.equals("Unknown Precipitation")){
+        } else if (code.equals("Unknown Precipitation")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\Precipitation.png"));
-        }else if(code.equals("Few clouds")|| code.equals("Scattered clouds")||code.equals("Broken clouds")|| code.equals("Overcast clouds")){
+        } else if (code.equals("Few clouds") || code.equals("Scattered clouds") || code.equals("Broken clouds") || code.equals("Overcast clouds")) {
             imgtemp.setIcon(new ImageIcon("src\\icon-temp\\clouds.png"));
         }
         tell_weather.setText(weather_data.getString("description"));
-        
-        
+
         URL placeZone = new URL("http://worldtimeapi.org/api/timezone/" + object_data.getString("timezone"));
         HttpURLConnection bridge = (HttpURLConnection) placeZone.openConnection();
         bridge.setRequestMethod("GET");
@@ -435,11 +433,17 @@ public class Time extends javax.swing.JInternalFrame {
         }
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         Date date = format.parse(dateTime);
-        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
         System.out.println(date);
         String dateUpdate = DATE_FORMAT.format(date);
         d_or_n_them.setText(dateUpdate + "");
-        d_or_n_us.setText(DATE_FORMAT.format(new Date()));
+        
+        LocalDate date_us = LocalDate.now(); // gets the current date
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println(date_us.format(formatter));
+        d_or_n_us.setText(date_us.format(formatter));
+        
+        
 
     }
 }
