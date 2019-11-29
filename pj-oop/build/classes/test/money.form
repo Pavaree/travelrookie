@@ -24,7 +24,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="page_money" alignment="0" pref="678" max="32767" attributes="0"/>
+          <Component id="page_money" alignment="0" pref="682" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -32,7 +32,7 @@
     <Container class="javax.swing.JPanel" name="page_money">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="86" green="9c" red="0" type="rgb"/>
+          <Color blue="a5" green="7b" red="e7" type="rgb"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[930, 630]"/>

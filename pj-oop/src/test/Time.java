@@ -101,7 +101,7 @@ public class Time extends javax.swing.JInternalFrame {
 
         setMinimumSize(new java.awt.Dimension(640, 640));
 
-        Time_and_temp.setBackground(new java.awt.Color(8, 126, 145));
+        Time_and_temp.setBackground(new java.awt.Color(231, 123, 165));
         Time_and_temp.setPreferredSize(new java.awt.Dimension(940, 660));
         Time_and_temp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

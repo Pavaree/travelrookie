@@ -29,7 +29,7 @@
     <Container class="javax.swing.JPanel" name="tab_up">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
+          <Color blue="43" green="23" red="27" type="rgb"/>
         </Property>
       </Properties>
       <Events>
@@ -74,7 +74,7 @@
     <Container class="javax.swing.JPanel" name="tab_beside">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="33" red="0" type="rgb"/>
+          <Color blue="5b" green="37" red="39" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -90,7 +90,7 @@
         <Container class="javax.swing.JPanel" name="btn_home">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="66" red="0" type="rgb"/>
+              <Color blue="ce" green="97" red="d5" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -139,7 +139,7 @@
         <Container class="javax.swing.JPanel" name="btn_time_emp">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="33" red="0" type="rgb"/>
+              <Color blue="97" green="5c" red="74" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -194,7 +194,7 @@
         <Container class="javax.swing.JPanel" name="btn_money">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="33" red="0" type="rgb"/>
+              <Color blue="97" green="5c" red="74" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -258,7 +258,7 @@
         <Container class="javax.swing.JPanel" name="btn_place">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="33" red="0" type="rgb"/>
+              <Color blue="97" green="5c" red="74" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -324,7 +324,7 @@
     <Container class="javax.swing.JDesktopPane" name="main_page">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="0" type="rgb"/>
+          <Color blue="a5" green="7b" red="e7" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>

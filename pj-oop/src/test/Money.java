@@ -60,7 +60,7 @@ public class Money extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        page_money.setBackground(new java.awt.Color(0, 156, 134));
+        page_money.setBackground(new java.awt.Color(231, 123, 165));
         page_money.setPreferredSize(new java.awt.Dimension(930, 630));
 
         Exchang_txt.setFont(new java.awt.Font("Consolas", 0, 48)); // NOI18N
@@ -175,7 +175,7 @@ public class Money extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
+            .addComponent(page_money, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
         );
 
         pack();

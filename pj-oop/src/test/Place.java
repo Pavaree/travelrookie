@@ -283,7 +283,7 @@ public class Place extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(930, 630));
 
-        Page_place.setBackground(new java.awt.Color(3, 151, 161));
+        Page_place.setBackground(new java.awt.Color(231, 123, 165));
         Page_place.setPreferredSize(new java.awt.Dimension(930, 630));
         Page_place.setRequestFocusEnabled(false);
 
@@ -395,7 +395,7 @@ public class Place extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Page_place, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE)
+            .addComponent(Page_place, javax.swing.GroupLayout.DEFAULT_SIZE, 914, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

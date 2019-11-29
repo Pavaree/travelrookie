@@ -50,7 +50,7 @@ public class Home extends javax.swing.JInternalFrame {
 
         setMinimumSize(new java.awt.Dimension(930, 630));
 
-        page_home.setBackground(new java.awt.Color(0, 153, 153));
+        page_home.setBackground(new java.awt.Color(231, 123, 165));
         page_home.setPreferredSize(new java.awt.Dimension(930, 630));
 
         img_travelrookie.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,7 +136,7 @@ public class Home extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
+            .addComponent(page_home, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
         );
 
         pack();

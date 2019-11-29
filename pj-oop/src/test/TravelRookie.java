@@ -29,10 +29,10 @@ public class TravelRookie extends javax.swing.JFrame {
         main_page.add(h).setVisible(true);
     }
     void setColor(JPanel panel){
-        panel.setBackground(new Color(0,102,255));
+        panel.setBackground(new Color(231,123,165));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(0,51,153));
+        panel.setBackground(new Color(116,92,151));
     }
     
     /**
@@ -65,7 +65,7 @@ public class TravelRookie extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tab_up.setBackground(new java.awt.Color(0, 0, 0));
+        tab_up.setBackground(new java.awt.Color(39, 35, 67));
         tab_up.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 tab_upMouseDragged(evt);
@@ -100,10 +100,10 @@ public class TravelRookie extends javax.swing.JFrame {
 
         getContentPane().add(tab_up, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 60));
 
-        tab_beside.setBackground(new java.awt.Color(0, 51, 102));
+        tab_beside.setBackground(new java.awt.Color(57, 55, 91));
         tab_beside.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_home.setBackground(new java.awt.Color(0, 102, 255));
+        btn_home.setBackground(new java.awt.Color(213, 151, 206));
         btn_home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_homeMouseClicked(evt);
@@ -121,7 +121,7 @@ public class TravelRookie extends javax.swing.JFrame {
 
         tab_beside.add(btn_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 40));
 
-        btn_time_emp.setBackground(new java.awt.Color(0, 51, 153));
+        btn_time_emp.setBackground(new java.awt.Color(116, 92, 151));
         btn_time_emp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_time_empMouseClicked(evt);
@@ -140,7 +140,7 @@ public class TravelRookie extends javax.swing.JFrame {
 
         tab_beside.add(btn_time_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 230, 50));
 
-        btn_money.setBackground(new java.awt.Color(0, 51, 153));
+        btn_money.setBackground(new java.awt.Color(116, 92, 151));
         btn_money.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_moneyMouseClicked(evt);
@@ -176,7 +176,7 @@ public class TravelRookie extends javax.swing.JFrame {
 
         tab_beside.add(btn_money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 230, 50));
 
-        btn_place.setBackground(new java.awt.Color(0, 51, 153));
+        btn_place.setBackground(new java.awt.Color(116, 92, 151));
         btn_place.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_placeMouseClicked(evt);
@@ -214,7 +214,7 @@ public class TravelRookie extends javax.swing.JFrame {
 
         getContentPane().add(tab_beside, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 230, 630));
 
-        main_page.setBackground(new java.awt.Color(0, 153, 153));
+        main_page.setBackground(new java.awt.Color(231, 123, 165));
 
         javax.swing.GroupLayout main_pageLayout = new javax.swing.GroupLayout(main_page);
         main_page.setLayout(main_pageLayout);
