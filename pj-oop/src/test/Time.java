@@ -167,10 +167,10 @@ public class Time extends javax.swing.JInternalFrame {
         jLabel2.setText("Bangkok");
         Time_and_temp.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 153));
         jLabel1.setText("jLabel1");
-        Time_and_temp.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 100, 30));
+        Time_and_temp.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -359,7 +359,7 @@ public class Time extends javax.swing.JInternalFrame {
         temp.setText(object_data.getInt("temp") + " °C");
         //System.out.println(object_data.getString("city_name"));
         city.setText(object_data.getString("city_name"));
-        jLabel1.setText(object_data.getString("city_name"));
+        jLabel1.setText(main.place);
         //System.out.println(object_data.getString("app_temp"));
         
         
